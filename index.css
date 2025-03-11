@@ -31,11 +31,13 @@ body {
           gap: 15px;
           border: 2px solid red;
           margin-right: 20px;
+          height: 80%;
       }
 
       .nav a{
           color:white;
           font-weight: bold;
+          font-size: large;
       }
 
       .nav-button{
@@ -46,7 +48,8 @@ body {
           border-color:#3f3b3b;
           border-radius: 10px;
           font-weight: bold;
-        align-items: center;
+          align-items: center;
+          height: 60%;
       }
 
         .search-container {
@@ -85,7 +88,20 @@ body {
           justify-content: center;
           align-items: center;
           border: 2px solid red;
-          
+          width: 10%; /* Set a fixed width or a percentage */
+          height: 80%; /* Set a fixed height */
+          overflow: hidden; /* Prevents the image from overflowing */
         }
         
+        .logo img {
+          max-width: 100%; /* Ensures the image does not exceed the container's width */
+          max-height: 100%; /* Ensures the image does not exceed the container's height */
+          object-fit: contain; /* Ensures the whole image fits inside */
+        }
+
+        .logo p {
+          color:white;
+          font-weight: bold;
+          margin-left: 10px;
+        }
         
