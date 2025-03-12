@@ -13,6 +13,8 @@
               font-family: Arial, sans-serif;
               display: flex;
               flex-direction: column;
+              justify-content: center; 
+              align-items: center;
               height: 100vh;
               background-color: var(--gray);
           }
@@ -96,7 +98,7 @@
             border: 2px solid red;
             width: 10%; /* Set a fixed width or a percentage */
             height: 80%; /* Set a fixed height */
-            overflow: hidden; /* Prevents the image from overflowing */
+            overflow: hidden;
           }
           
           .logo img {
@@ -111,7 +113,6 @@
             margin-left: 10px;
           }
           .signup-container {
-            margin-top: 100px;
             padding: 20px;
             background-color: var(--black);
             border: 2px solid var(--purple);
@@ -145,5 +146,18 @@
             border-radius: 5px;
             font-size: 16px;
         }
+        .titel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10%; /* Set a fixed width or a percentage */
+            height: 30%; /* Set a fixed height */
+          }
+          
+          .titel img {
+            max-width: 100%; /* Ensures the image does not exceed the container's width */
+            max-height: 100%; /* Ensures the image does not exceed the container's height */
+            object-fit: contain; /* Ensures the whole image fits inside */
+          }
 
           
