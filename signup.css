@@ -16,6 +16,7 @@
               align-items: center;
               height: 100vh;
               background-color: var(--gray);
+              gap: 20px;
           }
           .header{
             display: flex;
@@ -92,6 +93,8 @@
           }
   
           .logo {
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -129,6 +132,7 @@
         justify-content: center;
         align-items: center;
         padding: 5px;
+        margin: 10px;
     }
           .signup-image img {
             width: 100%;
@@ -136,6 +140,7 @@
             border-radius: 10px; /* Optional: Makes image look nice */
           }
           .signup-container {
+            margin: 10px;
             width: 50%;
             text-align: center;
             align-self: center;

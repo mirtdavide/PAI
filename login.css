@@ -16,6 +16,7 @@
               align-items: center;
               height: 100vh;
               background-color: var(--gray);
+              gap: 40px;
           }
           .header{
             display: flex;
@@ -122,13 +123,15 @@
           width: 50%;
           box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
           gap: 5px; /* Adjust spacing between image and form */
-      }
+        }
+
       .signup-image {
         width: 50%; /* Ensure the container is sized properly */
         display: flex; /* Helps with alignment */
         justify-content: center;
         align-items: center;
         padding: 5px;
+        margin: 10px;
     }
           .signup-image img {
             width: 100%;
@@ -136,6 +139,7 @@
             border-radius: 10px; /* Optional: Makes image look nice */
           }
           .signup-container {
+            margin: 10px;
             width: 50%;
             text-align: center;
             align-self: center;
