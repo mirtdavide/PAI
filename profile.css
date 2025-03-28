@@ -121,6 +121,7 @@
             height: 100%;
             width: 100%;
             padding-left: 5%;
+            gap: 20px;
           }
 
           .profile {
@@ -131,23 +132,52 @@
             align-items: center;
             background-color: var(--black);
             border: 2px solid var(--purple);
-            width: 28%;
+            width: 25%;
             box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
           }
           .profile p {
-            font-size: 22px;
+            font-size: 18px;
             color:white; 
             font-weight: bold;
         }
           .profile img {
             margin-top: 10px;
-            width: 60%; /* Adjust size as needed */
+            width: 55%; /* Adjust size as needed */
             height: auto; /* Keep it equal to width to maintain circle shape */
-            border-radius: 50%; /* Makes the image round */
             object-fit: cover; /* Ensures the image fills the space properly */
-            border: 3px solid var(--purple); /* Optional: Adds a border */
           }
+          
           .profile p {
-            margin: 15px; /* Adds margin between the last text (email) and bottom */
+            margin: 9px; /* Adds margin between the last text (email) and bottom */
         }
-  
+        .update {
+          margin-top: auto;
+          margin-bottom: 10px;
+          background-color: var(--purple);
+          color: var(--gray);
+          padding: 8px 15px;
+          border-style: solid;
+          border-color: #3f3b3b;
+          border-radius: 10px;
+          font-weight: bold;
+          align-items: center;
+          height: 10%;
+          cursor: pointer; 
+      }
+        .threads {
+          padding: 0px;
+          height: 70%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: var(--black);
+          border: 2px solid var(--purple);
+          width: 70%;
+          box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
+        }
+        .threads h {
+          margin-top: 10px;
+          font-size: 30px;
+          color:white; 
+          font-weight: bold;
+      }
