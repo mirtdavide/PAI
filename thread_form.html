@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="login.css">
+        <link rel="stylesheet" href="thread_form.css">
     </head>
     <body>
         <div class = "header">
@@ -23,23 +23,24 @@
                 <button class = "nav-button" onclick = "window.location.href='login.html'" >Login</button>
             </div>
         </div>
-        <div class="titel">
-            <img src="images/logo_purple.png" alt="Logo">
-        </div>
-        <div class="signup-wrapper">
-            <div class="signup-image">
-                <img src="images\Bookshelf-Wallpaper-About-Murals.jpg" alt="Signup Image">
-            </div>
-            <div class="signup-container">
-                <h2>Login</h2>
-                <form>
-                    <input type="text" class="input-field" placeholder="Username" required>
-                    <input type="password" class="input-field" placeholder="Password" required>
-                    <button type="submit" class="submit-button">Login</button>
-                </form>
-                <p>Dont have an account?<br/> 
-                <a href="signup.html">Click here</a> to register.</p>
-            </div>
+        <div class="thread-container">
+            <h2>Trhead</h2>
+            <form>
+                <input type="text" class="input-field" placeholder="Title" required>
+                <select class="categori" required>
+                    <option value="" disabled selected>Categori</option>
+                    <option value="option1">Author</option>
+                    <option value="option2">Novel</option>
+                    <option value="option3">Fan art</option>
+                    <option value="option4">Character</option>
+                    <option value="option5">Fan fiction</option>
+                    <option value="option6">News</option>
+                    <option value="option7">Adaptations</option>
+                    <option value="option8">Misc</option>
+                </select> 
+                <textarea class="description" rows="4" cols="50" placeholder="Description"></textarea>             
+                <button type="submit" class="submit-button">Creat</button>
+            </form>
         </div>
     </body>    
 </html>
