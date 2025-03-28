@@ -110,7 +110,7 @@ body {
         }
 
         .logo p {
-          color:white;
+          color:var(--purple);
           font-weight: bold;
           margin-left: 10px;
         }
@@ -121,41 +121,93 @@ body {
 
       }
 
-      .latest-posts{
-        
-        color:white;
-        font-size:35px;
+      .website-title{
+        font-weight: bold;
+        color:var(--purple);
+        font-size:20px;
         margin-bottom:20px;
+      }
+
+      .container-title{
+          
+          background-color: var(--purple);
+          border-radius: 5px 5px 0 0; 
+          height:40px;
+
+      }
+
+      .container-title p{
+          font-size:17px;
+          color:white;
+          font-weight: bold;
+          position:relative;
+          top:10px;
+          left:5px;
+
+
+
       }
       
       .post-container {
           display: flex;
           flex-direction: column;
-          gap: 15px;
+          border: 1px solid red;
+          border-radius:5px;
+          
+          
       }
       
       .post {
+          display:flex;
           background-color:var(--lighter-gray);
           padding: 15px;
-          border-radius: 8px;
+          /*border-radius: 8px;
+          */
+          border: 1px solid red;
+
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          height: 30px;
       }
+      .post-left{
+        flex: 30%;
+
+
+      }
+
+      .post-right{
+        flex:50%;
+
+
+      }
+
+
+      .profile-image{
+          width: 40px;
+          height: 40px;
+          border-radius: 10px;
+          border: 1px solid #ccc;
+          object-fit: cover;
+          float: left;
+          margin-right: 15px;
+
+      }
+
       
       .post-title {
-          font-size: 1rem;
+          font-size:15px;
           margin-bottom: 8px;
           color:white;
       }
-      
+     
       .post-content {
           font-size: 1rem;
           color: #555;
       }
       
-      .read-more {
-          display: inline-block;
+      .replies-label {
+          float:right;
           margin-top: 10px;
-          color:var(--purple);
+          color:white;
           text-decoration: none;
           font-weight: bold;
       }
