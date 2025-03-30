@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="thread_form.css">
     </head>
     <body>
         <div class = "header">
@@ -23,19 +23,24 @@
                 <button class = "nav-button" onclick = "window.location.href='login.html'" >Login</button>
             </div>
         </div>
-        <div class="content">
-            <div class="profile">
-                <img src="images\profile.png" alt="Profile image">
-                <p>name</p>
-                <p>email</p>
-                <p>Member Since: January 2024</p>
-                <p>Posts: 120</p>
-                <p>threads: 120</p>
-                <button class = "update" onclick = "" >Update</button>
-            </div>
-            <div class="threads">
-                <h>Your threads</h>
-            </div>
+        <div class="thread-container">
+            <h2>Trhead</h2>
+            <form>
+                <input type="text" class="input-field" placeholder="Title" required>
+                <select class="categori" required>
+                    <option value="" disabled selected>Categori</option>
+                    <option value="option1">Author</option>
+                    <option value="option2">Novel</option>
+                    <option value="option3">Fan art</option>
+                    <option value="option4">Character</option>
+                    <option value="option5">Fan fiction</option>
+                    <option value="option6">News</option>
+                    <option value="option7">Adaptations</option>
+                    <option value="option8">Misc</option>
+                </select> 
+                <textarea class="description" rows="4" cols="50" placeholder="Description"></textarea>             
+                <button type="submit" class="submit-button">Creat</button>
+            </form>
         </div>
     </body>    
 </html>
