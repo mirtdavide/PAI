@@ -117,27 +117,41 @@ body {
         }
 
 
-        .row-container{
+        .main-container{
           
-          display:row;
-          border:1px solid red;
-          max-width: 1700px;
+          height:800px;
+          display:flex; 
+          flex-direction: row; 
+          border: 1px solid #ff3300;
           width: 100%;
+          max-width: 1400px;
+          margin:10px auto;
+        }
+
+        .right-column{
+          height: 800px;
+          display:flex;
+          flex-direction: column;
+          width:20%;
+          height: 100%;
+          
+          float:right;
+  
   
         }
-        .container {
-          margin-left:10px;
-          
-          display: flex;
-          flex-direction: row;
-          gap: 20px; /* Space between post-container and rules */
-          align-items: flex-start; /* Align them at the top */
-          width: 100%;
-          border: 1px solid #ccc;
 
-          
+        
 
+        .left-column {
+          
+          display:flex;
+          flex-direction: column;
+          width:100%;
+          height: 100%;
+          border: 1px solid #12b841;
       }
+
+
       
       .website-title{
         font-weight: bold;
@@ -166,9 +180,10 @@ body {
       }
       
       .post-container {
+          float: left;
           margin-top:20px;
-          display: flex;
-          width:80%;
+          float:left;
+          width:100%;
           flex-direction: column;
           border: 1px solid red;
           border-radius:5px;
@@ -229,14 +244,14 @@ body {
           text-decoration: underline;
       }
       .card-container {
-        margin:10px;
+        float: left;
         margin-top:20px;
         border: 1px solid #ccc;
-
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr);        
         gap: 20px;
-        width: 77%;
+        
 
         
     }
@@ -249,8 +264,9 @@ body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
     .rules-container {
+
       margin-top:10px;
-      width: 20%;
+      width: 90%;
       background: #1a1a1a;
       padding: 10px;
       border-radius: 5px;
