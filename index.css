@@ -2,6 +2,7 @@
   --gray: #1B1B1B;
   --black:#121212;
   --purple:#A888FF;
+  --dark-purple:#7342fb;
   --light-gray: #3F3B3B;
   --lighter-gray:#353131;
   --border-color:rgb(83, 82, 82);
@@ -195,13 +196,14 @@ body {
       
       .post-container {
           border:1px solid var(--border-color); 
+          overflow: hidden;
+          border-radius:5px;
           float: left;
           margin-top:20px;
           float:left;
           width:98%;
           flex-direction: column;
-          overflow: hidden;
-          border-radius:5px;
+         
       }
       
       .post {
@@ -285,12 +287,11 @@ body {
         display:flex;
         flex-direction: column;
         width:98%;
-        border:1px solid var(--border-color);
-        border-radius: 0 0 5px 5px;
+        overflow: hidden;
+        border-radius:5px;
         background-color: var(--light-gray);
         
       }
-
       .card-container {
         padding:10px;
         margin: auto;
@@ -310,9 +311,76 @@ body {
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
+      .share{
+        margin-top:20px;
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        overflow: hidden;
+        border-radius:5px;
+        background-color: var(--light-gray);
+      }
+
+  
+      .share-container{
+        display:flex;
+        flex-direction: row;
+        border:1px solid var(--border-color); 
+        overflow: hidden;
+        border-radius:0 0 5px 5px;
+        padding:3px;
+       
+
+      }
+      .share-icons {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .share-icons i {
+        font-size: 22px;
+        color: var(--purple); /* Light brown color */
+        transition: 0.3s;
+    }
+
+    .share-icons i:hover {
+        color:var(--dark-purple);
+    }
+
+
+
+      
+
+      .categories-container {
+        padding:10px;
+        margin: auto;
+        width: 98%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);        
+        gap: 20px;
+        
+
+        
+    }
+    .category {
+        background: white;
+        padding: 20px;
+        height: 15px;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .category:hover{
+      background-color: var(--purple);
+      /*transform: scale(1.1);*/
+    }
+    
     .rules-container {
       margin-top: 20px;
-      border-radius: 0 0 5px 5px;
+      border-radius:5px;
       border:1px solid var(--light-gray);
       overflow:hidden;
       
@@ -363,3 +431,4 @@ body {
       
       font-size: 0.9rem;
   }
+
