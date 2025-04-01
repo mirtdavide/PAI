@@ -14,13 +14,13 @@
   padding:0;
 }
 
-body {
+body {  
             
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
             background-color: var(--gray);
-            
+            min-height: 150vh;
         }
 
 
@@ -36,7 +36,6 @@ body {
           height: 50px;
 
           background-color:var(--black);
-          /*border: 2px solid red;*/
           box-shadow: 3px 3px 5px rgba(101, 21, 193, 0.1);
           top:0;
           padding-right: 20px;
@@ -72,6 +71,30 @@ body {
           align-items: center;
           height: 80%;
       }
+      .load-button{
+        background-color: var(--purple);
+        color: white;
+        padding: 8px 15px;
+        border-style: solid;
+        border-color:#3f3b3b;
+        border-radius: 10px;
+        font-weight: bold;
+        align-items: center;
+        margin-top:10px;
+        height: 10%;
+    }
+
+    .load-more-button{
+      margin:20px auto;
+      background-color: var(--purple);
+      color: white;
+      border-style: solid;
+      border-color:#3f3b3b;
+      border-radius: 10px;
+      font-weight: bold;
+      height: 50px;
+      width:20%;
+  }
 
   
 
@@ -143,7 +166,6 @@ body {
         .main-container{
           display:flex;
           flex-direction: column;
-
           margin:0 auto;
           width:100%;
           max-width: 1200px;
@@ -159,7 +181,7 @@ body {
             border-radius:5px;
             background-color: var(--light-gray);
             margin-top:20px;
-            margin-bottom:20px;
+            
 
           }
 
@@ -183,7 +205,6 @@ body {
 
       .card-container {
         
-        border:1px solid red;
         width: 100%;
         display: grid;
         grid-template-columns: repeat(4, 1fr); 
@@ -203,12 +224,12 @@ body {
             align-items: center;
             background-color: var(--black);
             border: 2px solid var(--purple);
-            border-radius:10px;
+            border-radius:20px;
             box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
             text-align: center;
            
           }
-          .profile p {
+          .profile p.user-label {
             font-size: 95%;
             color:white;
             text-align:center;
@@ -219,12 +240,22 @@ body {
           font-size: 80%;
             color:gray;
             text-align:center;
-            
+            font-weight: bold;
+            margin-bottom: 8px;
+
+        }
+
+        .profile p.since{
+          margin-top:5px;
+          font-size: 100%;
+            color:white;
+            text-align:center;
+           
             margin-bottom: 8px;
 
         }
           .profile img {
-            margin-top: 10px;
+            margin-top: 20px;
             margin-bottom: 8px;
             border-radius:20px;
             width: 60%; /* Adjust size as needed */
@@ -233,6 +264,7 @@ body {
           }
 
           footer {
+            margin-top:auto;
             background:var(--black);
             color: #ddd;
             padding: 20px 0;
