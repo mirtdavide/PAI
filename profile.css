@@ -19,6 +19,8 @@ body {
             flex-direction: column;
             background-color: var(--gray);
             min-height: 150vh;
+            border:1px solid green;
+            
         }
 
         
@@ -149,50 +151,146 @@ body {
         }
 
         .main-container{
-          display:flex;
-          flex-direction: column;
-          margin:0 auto;
-          width:100%;
-          border:1px solid blue;
-        
+          height:800px;
+          display:flex; 
+          flex-direction: row; 
+          
+          width: 100%;
           max-width: 1200px;
-
+          margin:0px auto;
+         
         }
-          .content {
-            margin:0 auto;
-            display: flex;
-            flex-direction: row;
-            
-            align-items: center;
-            flex-direction: row;
-            height: 100%;
-            width: 100%;
-            padding-left: 5%;
-            gap: 20px;
-          }
+
+
+        .top-container{
+          margin-top:10px;
+          width: 100%; 
+          display:flex;
+          flex-direction:column;
+          border-radius:10px;
+          
+        }
+
+        .container-title{
+          background-color: var(--purple);
+          border-radius: 5px 5px 0 0; 
+          height:40px;
+
+      }
+
+      .container-title p{
+          font-size:17px;
+          color:white;
+          font-weight: bold;
+          position:relative;
+          top:10px;
+          left:5px;
+      }
+
 
           .profile {
-            padding: 0px;
-            height: auto;
+            background-color: var(--light-gray);
+            width:100%;
+            height: 30%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: var(--black);
-            border: 2px solid var(--purple);
-            width: 25%;
-            box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
+            flex-direction: row;
+            border-radius:0 0 10px 10px;
+            padding: 1%; /* Equal space on all sides */
+            box-sizing: border-box; /* Ensures padding is included in the size */
           }
+
+          .profile p.user-label{
+            font-size: 150%;
+            color:var(--purple); 
+            font-weight: bold;
+          }
+
+          .label-list{
+            display:flex;
+            flex-direction:row;
+          }
+
+          .label {
+            margin-left: 5px;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-size: 90%;
+            font-weight: bold;
+            color: black;
+          }
+          .profile p.role-country{
+            font-size: 100%;
+            color:white; 
+            font-weight: bold;
+          }
+          .moderator {
+            background-color: #333;
+            color: white;
+          }
+          
+          .founder {
+            background-color: #ffff99;
+            color: black;
+          }
+          
+          .developer {
+            background-color: #ccffcc;
+            color: black;
+          }
+          .stats-container {
+            display: flex;
+            justify-content: space-between; /* Even spacing */
+            
+            margin-left:10px;
+            color: white;
+            
+          }
+          
+          .stat {
+            text-align: left;
+          }
+          
+          .stat-label {
+            display:block;
+            align-self: left;
+            font-size: 90%;
+            font-weight: bold;
+            color: gray; /* Dimmer color for label */
+          }
+          .profile p.joined-label{
+            font-size: 90%;
+            color:gray; 
+            font-weight: bold;
+            font-weight: bold;
+            border-bottom:1px solid var(--border-color);
+          }
+
+          .profile-info{
+            display:flex;
+            flex:80%;
+            flex-direction:column;
+            
+          }
+
+
+          .profile img {
+            border-radius:10px;
+            width: 18%;
+            flex:20%; 
+            height: calc(100% - 1%);
+            align-self: center; 
+            object-fit: cover; 
+          }
+
+         
+
+
           .profile p {
             font-size: 18px;
             color:white; 
             font-weight: bold;
         }
-          .profile img {
-            margin-top: 10px;
-            width: 55%; /* Adjust size as needed */
-            height: auto; /* Keep it equal to width to maintain circle shape */
-            object-fit: cover; /* Ensures the image fills the space properly */
-          }
+          
           
           .profile p {
             margin: 9px; /* Adds margin between the last text (email) and bottom */
