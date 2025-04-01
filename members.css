@@ -22,6 +22,14 @@ body {
             
         }
 
+        .main-container{
+
+          display:flex;
+          flex-direction: column;
+          margin:10px auto;
+          width:80%;
+        }
+
         
         .header{
           display: flex;
@@ -206,11 +214,19 @@ body {
             box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
           }
           .profile p {
-            font-size: 100%;
+            font-size: 95%;
             color:white;
             text-align:center;
             font-weight: bold;
             margin-bottom: 8px;
+        }
+        .profile p.role{
+          font-size: 80%;
+            color:gray;
+            text-align:center;
+            
+            margin-bottom: 8px;
+
         }
           .profile img {
             margin-top: 10px;
