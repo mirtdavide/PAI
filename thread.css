@@ -148,6 +148,7 @@ header{
             margin:0 auto;
             width:100%;
             max-width: 1200px;
+            margin-bottom: 10px;
   
           }
 
@@ -156,9 +157,9 @@ header{
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            background-color: var(--black);
+            background-color: var(--gray);
             width: 100%;
-            height: 93%;
+            height: auto;
             gap: 5px; 
         }  
         .thread-title {
@@ -185,65 +186,88 @@ header{
             display: flex;
             width:80%;
             flex-direction: column;
-            border: 1px solid red;
+            border: 1px solid var(--purple);
             border-radius:5px;
             margin-bottom: 10px;
         }
         .post {
-            display:flex;
-            background-color:var(--lighter-gray);
+            display: flex;
+            background-color: var(--lighter-gray);
             padding: 15px;
-            /*border-radius: 8px;
-            */
-            border: 1px solid red;
+            border: 1px solid var(--purple);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            height: auto;
+            flex-direction: row;
+            min-height: auto; 
         }
-        .post-left{
-          flex: 20%;
-          height: auto;
-
-          display:flex;
-          flex-direction: column;
-          align-items: center;
+        
+        .post-left {
+            flex: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
-        .post-right{
-            height: auto;
-
-          flex:130%;
+        
+        .post-right {
+            flex: 80%; /* Adjusting the flex value */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
         }
-        .profile-image{
+        
+        .profile-image {
             width: 40px;
             height: 40px;
             border-radius: 10px;
             border: 1px solid #ccc;
             object-fit: cover;
-            float: left;
             margin-right: 15px;
-  
         }
+        
         .post-title {
-            font-size:15px;
+            font-size: 15px;
             margin-bottom: 8px;
-            color:white;
+            color: white;
         }
+        
         .post-content {
             font-size: 1rem;
             color: white;
         }
-        .post-right textarea {
-            height: 100%;
+        
+        .post-data {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: auto; /* Allow height to adjust based on content */
             width: 100%;
             color: white;
-            min-height: 40px; 
-            resize: none; 
-            overflow: hidden; 
+            background-color: transparent;
+            margin-bottom: 4px;
+        }
+        
+        .post-data p {
+            font-size: 10px;
+        }
+        
+        .post-right textarea {
+            width: 100%;
+            color: white;
+            min-height: 40px;
+            overflow: hidden;
             outline: none;
             border: none;
+            resize: none;
             background-color: transparent;
+            padding: 10px;
+            box-sizing: border-box; 
+            font-size: 14px;
+            line-height: 1.4;
         }
+        
         .comment-form {
             height: 160px;
+            background-color: var(--black);
         }
         .comment-form textarea {
             outline: none;
@@ -254,6 +278,9 @@ header{
             color: white;
             min-height: 40px; 
             resize: none; 
+            color: white;
+            padding: 10px;
+            font-size: 14px;
             overflow: hidden; 
         }
         .submit-button {
