@@ -1,0 +1,190 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+    </head>
+    <body>
+        <div class = "header">
+            <div class = "nav">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo">
+                    <p>Placeholder</p>
+                </div>
+                <a href = "threads_search.html" class = "nav_button">Threads</a>
+                <a href = "members.html" class = "nav_button">Members</a>
+                <div class = "search-container">
+                    <input type = "text" class = "search" placeholder = "Looking for a particular thread?">
+                    <div class="select-wrapper"></div>
+                        <select class="categori" required>
+                            <option value="option1">Misc</option>
+                            <option value="option2">Novel</option>
+                            <option value="option3">Fan art</option>
+                            <option value="option4">Character</option>
+                            <option value="option5">Fan fiction</option>
+                            <option value="option6">News</option>
+                            <option value="option7">Adaptations</option>
+                            <option value="option8">Author</option>
+                        </select> 
+                     </div>
+                <a href = "profile.html" class = "nav_button">My profile</a>
+                <a href = "thread_form.html" class = "nav_button">New thread</a>
+                <a href = "index.html" >Home</a>
+                <button class = "nav-button" onclick = "window.location.href = 'login.html'" >Login</button>
+                <button class = "nav-button" onclick = "window.location.href = 'signup.html'" >Signup</button>
+            </div>
+        </div>
+
+
+
+    
+
+        <div class="main-container">
+
+            <div class = "top-container">
+                <div class="container-title">
+                    <p>Member-info</p> 
+                </div>
+                <div class="profile">
+                    <div class="profile-container">
+                        <label for="fileInput">
+                            <img src="images/profile.png" alt="Profile image">
+                        </label>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                    </div>
+                    <div class = "profile-info">
+                        <span class = "username-label" contenteditable="true">Checco Zalone II</span>
+                        <div class = "label-list">
+                            <span class="label moderator">Forum Moderator</span>
+                            <span class="label developer">Developer</span>
+                        </div>
+                        <div class="country-wrapper">
+                            <span class = "role-country">Administrator - From:</span>
+                            <select id="country-select" class="country-select">
+                                <option value="AF">🇦🇫 Afghanistan</option>
+                                <option value="AL">🇦🇱 Albania</option>
+                                <option value="DZ">🇩🇿 Algeria</option>
+                                <option value="AD">🇦🇩 Andorra</option>
+                                <option value="AO">🇦🇴 Angola</option>
+                                <option value="AR">🇦🇷 Argentina</option>
+                                <option value="AM">🇦🇲 Armenia</option>
+                                <option value="AU">🇦🇺 Australia</option>
+                                <option value="AT">🇦🇹 Austria</option>
+                                <option value="AZ">🇦🇿 Azerbaijan</option>
+                                <option value="BH">🇧🇭 Bahrain</option>
+                                <option value="BD">🇧🇩 Bangladesh</option>
+                                <option value="BY">🇧🇾 Belarus</option>
+                                <option value="BE">🇧🇪 Belgium</option>
+                                <option value="BZ">🇧🇿 Belize</option>
+                                <option value="BJ">🇧🇯 Benin</option>
+                                <option value="BO">🇧🇴 Bolivia</option>
+                                <option value="BR">🇧🇷 Brazil</option>
+                                <option value="BG">🇧🇬 Bulgaria</option>
+                                <option value="CA">🇨🇦 Canada</option>
+                                <option value="CL">🇨🇱 Chile</option>
+                                <option value="CN">🇨🇳 China</option>
+                                <option value="CO">🇨🇴 Colombia</option>
+                                <option value="HR">🇭🇷 Croatia</option>
+                                <option value="CU">🇨🇺 Cuba</option>
+                                <option value="CZ">🇨🇿 Czech Republic</option>
+                                <option value="DK">🇩🇰 Denmark</option>
+                                <option value="EG">🇪🇬 Egypt</option>
+                                <option value="FI">🇫🇮 Finland</option>
+                                <option value="FR">🇫🇷 France</option>
+                                <option value="DE">🇩🇪 Germany</option>
+                                <option value="GR">🇬🇷 Greece</option>
+                                <option value="HU">🇭🇺 Hungary</option>
+                                <option value="IN">🇮🇳 India</option>
+                                <option value="ID">🇮🇩 Indonesia</option>
+                                <option value="IR">🇮🇷 Iran</option>
+                                <option value="IQ">🇮🇶 Iraq</option>
+                                <option value="IE">🇮🇪 Ireland</option>
+                                <option value="IT" selected>🇮🇹 Italy</option>
+                                <option value="JP">🇯🇵 Japan</option>
+                                <option value="KR">🇰🇷 South Korea</option>
+                                <option value="MY">🇲🇾 Malaysia</option>
+                                <option value="MX">🇲🇽 Mexico</option>
+                                <option value="NL">🇳🇱 Netherlands</option>
+                                <option value="NZ">🇳🇿 New Zealand</option>
+                                <option value="NG">🇳🇬 Nigeria</option>
+                                <option value="NO">🇳🇴 Norway</option>
+                                <option value="PK">🇵🇰 Pakistan</option>
+                                <option value="PE">🇵🇪 Peru</option>
+                                <option value="PH">🇵🇭 Philippines</option>
+                                <option value="PL">🇵🇱 Poland</option>
+                                <option value="PT">🇵🇹 Portugal</option>
+                                <option value="RU">🇷🇺 Russia</option>
+                                <option value="SA">🇸🇦 Saudi Arabia</option>
+                                <option value="RS">🇷🇸 Serbia</option>
+                                <option value="SG">🇸🇬 Singapore</option>
+                                <option value="ZA">🇿🇦 South Africa</option>
+                                <option value="ES">🇪🇸 Spain</option>
+                                <option value="SE">🇸🇪 Sweden</option>
+                                <option value="CH">🇨🇭 Switzerland</option>
+                                <option value="TH">🇹🇭 Thailand</option>
+                                <option value="TR">🇹🇷 Turkey</option>
+                                <option value="UA">🇺🇦 Ukraine</option>
+                                <option value="AE">🇦🇪 United Arab Emirates</option>
+                                <option value="GB">🇬🇧 United Kingdom</option>
+                                <option value="US">🇺🇸 United States</option>
+                                <option value="VN">🇻🇳 Vietnam</option>
+                            </select>
+                        </div>
+                        <span class = "joined-label">Joined: March 2025</span>
+
+                        <div class="stats-container">
+                            <div class="stat">
+                              <span class="stat-label">Posts</span>
+                              <span class="value">11,145</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-label">Replies</span>
+                                <span class="value">6,044</span>
+                              </div>
+                              <div class="stat">
+                                <span class="stat-label">Total</span>
+                                <span class="value">83</span>
+                            </div>
+                        </div>
+
+                    <button class = "load-more-button" onclick = "window.location.href = 'profile.html'" >Update</button>       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>A forum for passionate readers to discuss novels, share opinions, and explore literature.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="threads_search.html">Discussions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: support@novelforum.edu</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2025 Coffe & Novel Forum | Matteo Valazza - Mirt Davide | All Rights Reserved</p>
+            </div>
+        </footer>      
+    </body>    
+</html>
