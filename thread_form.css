@@ -127,16 +127,16 @@ body {
           display: flex;
           flex-direction: row;
         
-          width: 12%; /* Set a fixed width or a percentage */
-          height: 80%; /* Set a fixed height */
-          overflow: hidden; /* Prevents the image from overflowing */
+          width: 12%; 
+          height: 80%; 
+          overflow: hidden; 
         }
         
         .logo img {
        
-          max-width: 100%; /* Ensures the image does not exceed the container's width */
-          max-height: 100%; /* Ensures the image does not exceed the container's height */
-          object-fit: contain; /* Ensures the whole image fits inside */
+          max-width: 100%; 
+          max-height: 100%;
+          object-fit: contain; 
         }
 
         .logo p {
@@ -173,7 +173,7 @@ body {
             border-radius: 5px;
             font-size: 16px;
             margin-bottom: 5px;
-            margin: 10px auto; /* Auto centers horizontally */
+            margin: 10px auto;
             display: block;
         }
         .thread-container {
@@ -187,7 +187,7 @@ body {
             width: 50%;
             height: auto;
             box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
-            gap: 5px; /* Adjust spacing between image and form */
+            gap: 5px; 
         }  
         .thread-container h2{
             color: white;

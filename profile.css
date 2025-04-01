@@ -129,16 +129,16 @@ body {
           display: flex;
           flex-direction: row;
         
-          width: 12%; /* Set a fixed width or a percentage */
-          height: 80%; /* Set a fixed height */
-          overflow: hidden; /* Prevents the image from overflowing */
+          width: 12%; 
+          height: 80%;
+          overflow: hidden; 
         }
         
         .logo img {
        
-          max-width: 100%; /* Ensures the image does not exceed the container's width */
-          max-height: 100%; /* Ensures the image does not exceed the container's height */
-          object-fit: contain; /* Ensures the whole image fits inside */
+          max-width: 100%;
+          max-height: 100%; 
+          object-fit: contain; 
         }
 
         .logo p {
@@ -189,13 +189,13 @@ body {
         }
           .profile img {
             margin-top: 10px;
-            width: 55%; /* Adjust size as needed */
-            height: auto; /* Keep it equal to width to maintain circle shape */
-            object-fit: cover; /* Ensures the image fills the space properly */
+            width: 55%; 
+            height: auto; 
+            object-fit: cover;
           }
           
           .profile p {
-            margin: 9px; /* Adds margin between the last text (email) and bottom */
+            margin: 9px;
         }
         .update {
           margin-top: auto;

@@ -17,10 +17,8 @@ body {
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
             background-color: var(--gray);
             min-height: 100vh;
-
         }
 
         
@@ -78,6 +76,7 @@ body {
         align-items: center;
         margin-left:2%;
         margin-right:2%;
+
       }
 
     .search{
@@ -131,16 +130,16 @@ body {
           display: flex;
           flex-direction: row;
         
-          width: 12%; /* Set a fixed width or a percentage */
-          height: 80%; /* Set a fixed height */
-          overflow: hidden; /* Prevents the image from overflowing */
+          width: 12%; 
+          height: 80%; 
+          overflow: hidden; 
         }
         
         .logo img {
        
-          max-width: 100%; /* Ensures the image does not exceed the container's width */
-          max-height: 100%; /* Ensures the image does not exceed the container's height */
-          object-fit: contain; /* Ensures the whole image fits inside */
+          max-width: 100%;
+          max-height: 100%; 
+          object-fit: contain; 
         }
 
         .logo p {
@@ -152,7 +151,6 @@ body {
         .main-container{
           display:flex;
           flex-direction: column;
-
           margin:0 auto;
           width:100%;
           max-width: 1200px;
@@ -168,12 +166,12 @@ body {
           border: 2px solid var(--purple);
           width: 50%;
           box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
-          gap: 5px; /* Adjust spacing between image and form */
+          gap: 5px; 
         }
 
       .signup-image {
-        width: 50%; /* Ensure the container is sized properly */
-        display: flex; /* Helps with alignment */
+        width: 50%; 
+        display: flex; 
         justify-content: center;
         align-items: center;
         padding: 5px;
@@ -182,7 +180,7 @@ body {
           .signup-image img {
             width: 100%;
             height: auto;
-            border-radius: 10px; /* Optional: Makes image look nice */
+            border-radius: 10px;
           }
           .signup-container {
             margin: 10px;
@@ -228,15 +226,15 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 10%; /* Set a fixed width or a percentage */
-            height: 20%; /* Set a fixed height */
+            width: 10%; 
+            height: 20%; 
           }
           
           .titel img {
             
-            max-width: 100%; /* Ensures the image does not exceed the container's width */
-            max-height: 100%; /* Ensures the image does not exceed the container's height */
-            object-fit: contain; /* Ensures the whole image fits inside */
+            max-width: 100%;
+            max-height: 100%; 
+            object-fit: contain; 
           }
           footer {
             background:var(--black);
@@ -305,5 +303,4 @@ body {
             font-size: 14px;
         }
         
-
           
