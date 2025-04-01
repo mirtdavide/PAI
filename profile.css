@@ -151,9 +151,9 @@ body {
         }
 
         .main-container{
-          height:800px;
+          height:auto;
           display:flex; 
-          flex-direction: row; 
+          flex-direction: column; 
           
           width: 100%;
           max-width: 1200px;
@@ -163,12 +163,21 @@ body {
 
 
         .top-container{
-          margin-top:10px;
+          border:1px solid red;
+          margin-top:20px;
           width: 100%; 
           display:flex;
           flex-direction:column;
           border-radius:10px;
-          
+        }
+
+        .bottom-container{
+          border:1px solid green;
+          margin-top:20px;
+          width: 100%; 
+          display:flex;
+          flex-direction:column;
+          border-radius:10px;
         }
 
         .container-title{
@@ -191,24 +200,40 @@ body {
           .profile {
             background-color: var(--light-gray);
             width:100%;
-            height: 30%;
+            height: 35%;
             display: flex;
             flex-direction: row;
+            border:1px solid blue;
             border-radius:0 0 10px 10px;
             padding: 1%; /* Equal space on all sides */
             box-sizing: border-box; /* Ensures padding is included in the size */
           }
 
-          .profile p.user-label{
-            font-size: 150%;
+          .username-label{
+            font-size: 120%;
             color:var(--purple); 
             font-weight: bold;
+            display:block;
+            align-self: left;
+            margin-left:10px;
           }
 
           .label-list{
+            margin-top:5px;
             display:flex;
             flex-direction:row;
           }
+          .load-more-button{
+            margin:20px 10px;
+            background-color: var(--purple);
+            color: white;
+            border-style: solid;
+            border-color:#3f3b3b;
+            border-radius: 10px;
+            font-weight: bold;
+            height: 50px;
+            width:20%;
+        }
 
           .label {
             margin-left: 5px;
@@ -218,8 +243,10 @@ body {
             font-weight: bold;
             color: black;
           }
-          .profile p.role-country{
-            font-size: 100%;
+          .role-country{
+            margin-left:10px;
+            margin-top:10px;
+            font-size: 90%;
             color:white; 
             font-weight: bold;
           }
@@ -238,10 +265,12 @@ body {
             color: black;
           }
           .stats-container {
+            margin-top:10px;
+            margin-left:10px;
             display: flex;
             justify-content: space-between; /* Even spacing */
-            
-            margin-left:10px;
+            border-bottom:1px solid var(--border-color);
+           
             color: white;
             
           }
@@ -257,7 +286,9 @@ body {
             font-weight: bold;
             color: gray; /* Dimmer color for label */
           }
-          .profile p.joined-label{
+          .joined-label{
+            margin-top:10px;
+            margin-left:10px;
             font-size: 90%;
             color:gray; 
             font-weight: bold;
@@ -273,15 +304,7 @@ body {
           }
 
 
-          .profile img {
-            border-radius:10px;
-            width: 18%;
-            flex:20%; 
-            height: calc(100% - 1%);
-            align-self: center; 
-            object-fit: cover; 
-          }
-
+        
          
 
 
@@ -291,10 +314,18 @@ body {
             font-weight: bold;
         }
           .profile img {
-            margin-top: 10px;
-            width: 55%; 
-            height: auto; 
+            
+            width: 20%; 
+            
             object-fit: cover;
+            
+            border-radius:10px;
+            
+            height:calc(100% - 10%);
+            align-self: center; 
+            object-fit: cover; 
+          
+  
           }
           
           .profile p {
@@ -353,6 +384,115 @@ body {
         gap:20px;
         
     }
+
+
+    .post-container {
+      border:1px solid var(--border-color); 
+      overflow: hidden;
+      border-radius:5px;
+      float: left;
+      margin-top:20px;
+      float:left;
+      width:100%;
+      flex-direction: column;
+     
+  }
+  
+  .post {
+      display:flex;
+      flex-direction: row;
+      background-color:var(--lighter-gray);
+      padding: 15px;
+      border-top:1px solid rgb(83, 82, 82);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 30px;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .post-left{
+    width:40%;
+  }
+
+  .post-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:20%;
+  }
+
+  .post-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width:40%;
+  }
+
+  .post-info{
+    display: flex;
+    flex-direction:column;
+  }
+  .replier-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    object-fit: cover;
+    margin-left: 15px;
+
+}
+.post-label{
+  font-size:14px;
+  margin-bottom: 8px;
+  color:white;
+  
+}
+.user-label{
+  font-size: 13px;
+  color: #555;
+}
+  .profile-image{
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      object-fit: cover;
+      float: left;
+      margin-right: 15px;
+
+  }
+
+  
+  .post-title {
+      font-size:15px;
+      margin-bottom: 8px;
+      color:white;
+  }
+
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  10px auto;
+    width: 38%;
+    background: var(--black);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.pagination button, .pagination .page-number {
+    background: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    border-radius: 8px;
+    margin: 0 3px;
+}
+.pagination button:hover, .pagination .page-number:hover {
+    background: var(--purple);
+}
     
     .footer-section {
         width: 200px;
