@@ -140,10 +140,10 @@ body {
           height:800px;
           display:flex; 
           flex-direction: row; 
-     
+          
           width: 100%;
           max-width: 1200px;
-          margin:10px auto;
+          margin:0px auto;
         }
 
         .right-column{
@@ -299,9 +299,7 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);        
         gap: 20px;
-        
 
-        
     }
     .card {
         background: white;
