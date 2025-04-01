@@ -20,7 +20,8 @@ body {
             display: flex;
             flex-direction: column;
             background-color: var(--gray);
-            
+            min-height: 100vh;
+
         }
 
 
@@ -255,6 +256,8 @@ body {
             padding: 20px 0;
             font-family: Arial, sans-serif;
             border-radius:5px 5px 0 0;
+            margin-top: auto;
+
         }
         
         .footer-container {
