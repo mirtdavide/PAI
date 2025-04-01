@@ -165,16 +165,18 @@ body {
         }
         
         .submit-button {
-            width: 50%;
-            padding: 10px;
-            background-color:var(--purple) ;
-            color: var(--gray);
-            border: none;
-            border-radius: 5px;
             font-size: 16px;
             margin-bottom: 5px;
-            margin: 10px auto;
             display: block;
+            margin:20px auto;
+            background-color: var(--purple);
+            color: white;
+            border-style: solid;
+            border-color:#3f3b3b;
+            border-radius: 10px;
+            font-weight: bold;
+            height: 50px;
+            width:20%;
         }
         .thread-container {
           margin:50px auto;
@@ -187,6 +189,7 @@ body {
             width: 50%;
             height: auto;
             box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
+            border-radius: 10px;
             gap: 5px; 
         }  
         .thread-container h2{

@@ -44,7 +44,11 @@
                             <p class="post-content">Author Name</p>
                         </div>
                         <div class ="post-right">
-                            <textarea readonly>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
+                                                        <div class="post-data">
+                                <p>Date</p>
+                                <p>post nr</p>
+                            </div>
+                            <textarea class="autoResize" disabled>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
                         </div>
                     </div>
                     <div class="post">
@@ -53,7 +57,11 @@
                             <p class="post-content">Author Name</p>
                         </div>
                         <div class ="post-right">
-                            <textarea readonly>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
+                            <div class="post-data">
+                                <p>Date</p>
+                                <p>post nr</p>
+                            </div>
+                            <textarea class="autoResize" disabled>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
                         </div>
                     </div>
                     <div class="post">
@@ -62,7 +70,11 @@
                             <p class="post-content">Author Name</p>
                         </div>
                         <div class ="post-right">
-                            <textarea readonly>This is  asdfasdfasdfasfasdjnkf hafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhaasdfasdfasdfasfasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfha fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
+                            <div class="post-data">
+                                <p>Date</p>
+                                <p>post nr</p>
+                            </div>
+                            <textarea class="autoResize" disabled>This is  asdfasdfasdfasfasdjnkf hafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhaasdfasdfasdfasfasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfhafasdjnkfha fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
                         </div>
                     </div>
                     <form class="comment-form">
@@ -81,10 +93,8 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Discussions</a></li>
-                        <li><a href="#">Genres</a></li>
-                        <li><a href="#">Top Reads</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="threads_search.html">Discussions</a></li>
                     </ul>
                 </div>
 
@@ -109,3 +119,14 @@
         </footer>       
     </body>    
 </html>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const textareas = document.querySelectorAll(".autoResize");
+
+    textareas.forEach(textarea => {
+        // Set initial height based on content
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
+    });
+});
+</script>
