@@ -32,8 +32,7 @@ body {
           height: 50px;
 
           background-color:var(--black);
-          /*border: 2px solid red;*/
-          box-shadow: 3px 3px 5px rgba(193, 21, 21, 0.1);
+          box-shadow: 3px 3px 5px rgba(101, 21, 193, 0.1);
           top:0;
           padding-right: 20px;
         }
@@ -42,7 +41,7 @@ body {
           display : flex;
           flex-direction: row;
           gap: 20px;
-      
+          align-items: center;
           margin-right: 20px;
           height: 100%;
           width:1200px;
@@ -51,12 +50,11 @@ body {
       }
 
       .nav a{
-          margin-top:10px;
+          margin-top:0px;
           color:white;
           /*font-weight: bold;*/
           font-size: 15px;
       }
-
       .nav-button{
           background-color: var(--purple);
           color: white;
@@ -77,8 +75,6 @@ body {
         align-items: center;
         margin-left:2%;
         margin-right:2%;
-        border: 2px solid var(--purple);
-
       }
 
     .search{
@@ -90,6 +86,7 @@ body {
         border: 1px solid #ccc;
         border-radius: 30px;
         outline: none;
+        padding-right: 100px;
     }
 
     .select-wrapper {
@@ -232,6 +229,8 @@ body {
           font-family: Arial, sans-serif;
           border-radius:5px 5px 0 0;
           margin-top: auto;
+          box-shadow: 3px 3px 5px rgba(101, 21, 193, 0.1);
+
       }
       
       .footer-container {
