@@ -18,8 +18,7 @@ body {
             display: flex;
             flex-direction: column;
             background-color: var(--gray);
-            min-height: 100vh;
-
+            min-height: 150vh;
             
         }
 
@@ -501,6 +500,7 @@ body {
       font-size: 0.9rem;
   }
   footer {
+    margin-top:auto;
     background:var(--black);
     color: #ddd;
     padding: 20px 0;
