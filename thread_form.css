@@ -69,44 +69,61 @@ body {
           height: 80%;
       }
 
-        .search-container {
-            position: relative;
-            width: 350px;
-            height: 50px;;
-            margin-left:2%;
-            margin-right:2%;
-          }
+      .search-container {
+        position: relative;
+        width: 350px;
+        height: 50px;;
+        display: flex;
+        align-items: center;
+        margin-left:2%;
+        margin-right:2%;
+        border: 2px solid var(--purple);
 
-       
+      }
 
-        
+    .search{
+        width: 100%;
+        padding:10px;
+        font-size: 16px;
+        margin-top:5px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+        outline: none;
+    }
 
-        .search{
-            width: 100%;
-            padding:10px;
-            font-size: 16px;
-            margin-top:5px;
-            height: 30px;
-            border: 1px solid #ccc;
-            border-radius: 50px;
-            outline: none;
-        }
+    .select-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+    .categori {
+      margin-top: 5px;
+      position:absolute ;
+      right: 10px; 
+      border: none;
+      background: none;
+      font-size: 14px;
+      color: #333;
+      padding: 5px;
+      cursor: pointer;
+      outline: none;
+      height: 100%;
+      width: auto;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+  }
 
-        .search-button {
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-
-        .search-button img{
-          margin-bottom:10px;
-          width: 24px;
-          height: 24px;
-        }
+  .select-wrapper::after {
+    content: "▼"; 
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+    position: absolute;
+    right: 5px;
+    pointer-events: none;
+}
 
         .logo {
           
@@ -194,7 +211,7 @@ body {
             font-size: 16px;
             
         }
-        .categori {
+        .form-categori {
             width: 50%;
             padding: 10px;
             margin: 10px 0;
