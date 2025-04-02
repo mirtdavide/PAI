@@ -231,16 +231,17 @@ body {
         border-top:1px solid rgb(83, 82, 82);
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         height: 30px;
-        align-items: center;
-        justify-content: space-between;
+        
+       
     }
     .post-left{
       width:40%;
+      
     }
 
     .post-center{
       display: flex;
-      align-items: center;
+      
       justify-content: center;
       width:20%;
     }
@@ -248,7 +249,7 @@ body {
     .post-right{
       display: flex;
       flex-direction: row;
-      align-items: center;
+      
       justify-content: flex-end;
       width:40%;
     }

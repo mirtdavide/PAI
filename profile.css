@@ -157,7 +157,8 @@ body {
           
           width: 100%;
           max-width: 1200px;
-          margin:0px auto;
+          margin:0 auto;
+          margin-bottom:50px;
          
         }
 
