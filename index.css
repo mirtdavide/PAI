@@ -19,7 +19,6 @@ body {
             flex-direction: column;
             background-color: var(--gray);
             min-height: 150vh;
-            
         }
 
         
@@ -482,16 +481,16 @@ s
       font-size: 0.9rem;
   }
   footer {
+    display:flex;
+    flex-direction: column;
     margin-top:auto;
     background:var(--black);
     color: #ddd;
     padding: 20px 0;
-    font-family: Arial, sans-serif;
+    
     border-radius:5px 5px 0 0;
     margin-top: auto;
     box-shadow: 3px 3px 5px rgba(101, 21, 193, 0.1);
-
-
 }
 
 .footer-container {
