@@ -1,0 +1,52 @@
+.rules-container {
+    margin-top: 20px;
+    border-radius:5px;
+    border:1px solid var(--light-gray);
+    overflow:hidden;
+    
+}
+details {
+    background-color: var(--light-gray);
+    border-top:1px solid var(--border-color);
+    overflow: hidden;
+}
+summary {
+    padding: 10px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease-in-out;
+}
+summary:hover {
+    background: #444;
+}
+details[open] summary {
+    background: #555;
+}
+
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color:white;
+}
+
+.rule-content {
+    display: grid;
+    grid-template-rows: 0fr; 
+    transition: grid-template-rows 0.3s ease-in-out;
+    color:white;  
+}
+details[open] .rule-content {
+    grid-template-rows: 1fr; 
+}
+
+.rule-content div {
+    overflow: hidden;
+    padding: 0 10px;
+    background: #222;
+    
+    font-size: 0.9rem;
+}

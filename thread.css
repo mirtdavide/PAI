@@ -209,7 +209,6 @@ header{
         .post-bubble:after {
             content: '';
             position: absolute;
-            
             left: -10px;
             top: 10px;
             width: 0;

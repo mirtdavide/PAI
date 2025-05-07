@@ -1,0 +1,37 @@
+.share{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    overflow: hidden;
+    border-radius:5px;
+    background-color: var(--light-gray);
+  }
+
+
+  .share-container{
+    display:flex;
+    flex-direction: row;
+    border:1px solid var(--border-color); 
+    overflow: hidden;
+    border-radius:0 0 5px 5px;
+    padding:10px;
+   
+
+  }
+  .share-icons {
+    display: flex;
+    flex-direction:row;
+    gap: 20px;
+  
+}
+
+.share-icons i {
+    font-size: 22px;
+    color: var(--purple); 
+    transition: 0.3s;
+}
+
+.share-icons i:hover {
+    color:var(--dark-purple);
+}
