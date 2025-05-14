@@ -1,5 +1,5 @@
 <head>
-<link rel="stylesheet" href="rules_container.css">
+<link rel="stylesheet" href="/rules_container.css">
 </head>
 
 <div class="rules-container">

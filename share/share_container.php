@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="share_container.css">
+    <link rel="stylesheet" href="/share_container.css">
 </head>
 <div class = "share">
     <div class="container-title">
