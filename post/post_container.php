@@ -6,7 +6,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
@@ -25,7 +25,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
@@ -63,7 +63,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
@@ -82,7 +82,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
@@ -101,7 +101,7 @@
         <div class = "post-left">
             <img src="images/profile.png" alt="Profile Image" class="profile-image">
             <div class="post-info">
-                <h3 class="post-title"><a href="thread.html">Post Title 1</a></h3>
+                <h3 class="post-title"><a href="../thread/thread.php">Post Title 1</a></h3>
                 <p class="user-label">Author Name</p>
             </div>
         </div>
