@@ -99,6 +99,6 @@
             </div>
             <button class = "load-more-button" onclick = "window.location.href = ''" >Load More</button>
         </div>
-        <?php require 'footer/footer.php'; ?>
+        <?php require 'footer.php'; ?>
     </body>    
 </html>
