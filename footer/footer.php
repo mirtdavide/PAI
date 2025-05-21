@@ -10,8 +10,8 @@
         <div class="footer-section">
             <h3>Quick Links</h3>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="threads_search.html">Discussions</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="threads_search.php">Discussions</a></li>
             </ul>
         </div>
 

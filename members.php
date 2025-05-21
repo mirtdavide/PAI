@@ -16,84 +16,84 @@
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                     <div class="profile">
                         <img src="images\profile.png" alt="Profile image">
                         <p class = "user-label">Giangiorgio</p>
                         <p class = "role">Admin</p>
                         <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.html'" >See Profile</button>
+                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
                     </div>
                 </div>
             </div>

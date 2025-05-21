@@ -10,8 +10,8 @@
                     <img src="images/logo.png" alt="Logo">
                     <p>Placeholder</p>
                 </div>
-                <a href = "threads_search.html" class = "nav_button">Threads</a>
-                <a href = "members.html" class = "nav_button">Members</a>
+                <a href = "threads_search.php" class = "nav_button">Threads</a>
+                <a href = "members.php" class = "nav_button">Members</a>
                 <div class = "search-container">
                     <input type = "text" class = "search" placeholder = "Looking for a particular thread?">
                     <div class="select-wrapper"></div>
@@ -26,11 +26,11 @@
                             <option value="option8">Author</option>
                         </select> 
                      </div>
-                <a href = "profile.html" class = "nav_button">My profile</a>
-                <a href = "thread_form.html" class = "nav_button">New thread</a>
-                <a href = "index.html" >Home</a>
-                <button class = "nav-button" onclick = "window.location.href = 'login.html'" >Login</button>
-                <button class = "nav-button" onclick = "window.location.href = 'signup.html'" >Signup</button>
+                <a href = "profile.php" class = "nav_button">My profile</a>
+                <a href = "thread_form.php" class = "nav_button">New thread</a>
+                <a href = "index.php" >Home</a>
+                <button class = "nav-button" onclick = "window.location.href = 'login.php'" >Login</button>
+                <button class = "nav-button" onclick = "window.location.href = 'signup.php'" >Signup</button>
             </div>
         </div>
         <div>
@@ -49,7 +49,7 @@
                         <button type="submit" class="submit-button">Login</button>
                     </form>
                     <p>Dont have an account?<br/> 
-                    <a href="signup.html">Click here</a> to register.</p>
+                    <a href="signup.php">Click here</a> to register.</p>
                 </div>
             </div>
         </div>
@@ -62,8 +62,8 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="threads_search.html">Discussions</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="threads_search.php">Discussions</a></li>
                     </ul>
                 </div>
 

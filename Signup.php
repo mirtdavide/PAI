@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="thread_form.css">
+        <link rel="stylesheet" href="signup.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     </head>
     <body>
@@ -10,8 +10,8 @@
                     <img src="images/logo.png" alt="Logo">
                     <p>Placeholder</p>
                 </div>
-                <a href = "threads_search.html" class = "nav_button">Threads</a>
-                <a href = "members.html" class = "nav_button">Members</a>
+                <a href = "threads_search.php" class = "nav_button">Threads</a>
+                <a href = "members.php" class = "nav_button">Members</a>
                 <div class = "search-container">
                     <input type = "text" class = "search" placeholder = "Looking for a particular thread?">
                     <div class="select-wrapper"></div>
@@ -26,31 +26,33 @@
                             <option value="option8">Author</option>
                         </select> 
                      </div>
-                <a href = "profile.html" class = "nav_button">My profile</a>
-                <a href = "thread_form.html" class = "nav_button">New thread</a>
-                <a href = "index.html" >Home</a>
-                <button class = "nav-button" onclick = "window.location.href = 'login.html'" >Login</button>
-                <button class = "nav-button" onclick = "window.location.href = 'signup.html'" >Signup</button>
+                <a href = "profile.php" class = "nav_button">My profile</a>
+                <a href = "thread_form.php" class = "nav_button">New thread</a>
+                <a href = "index.php" >Home</a>
+                <button class = "nav-button" onclick = "window.location.href = 'login.php'" >Login</button>
+                <button class = "nav-button" onclick = "window.location.href = 'signup.php'" >Signup</button>
             </div>
         </div>
-        <div class="main-container">
-            <div class="thread-container">
-                <h2>Thread</h2>
-                <form>
-                    <input type="text" class="input-field" placeholder="Title" required>
-                    <select class="form-categori" required>
-                        <option value="option1">Author</option>
-                        <option value="option2">Novel</option>
-                        <option value="option3">Fan art</option>
-                        <option value="option4">Character</option>
-                        <option value="option5">Fan fiction</option>
-                        <option value="option6">News</option>
-                        <option value="option7">Adaptations</option>
-                        <option value="option8">Misc</option>
-                    </select> 
-                    <textarea class="description" rows="4" cols="50" placeholder="Description"></textarea>             
-                    <button type="submit" class="submit-button">Create</button>
-                </form>
+        <div>
+        <div class="titel">
+            <img src="images/logo_purple.png" alt="Logo">
+        </div class="main-container">
+            <div class="signup-wrapper">
+                <div class="signup-image">
+                    <img src="images/fantasy-bookshelf.jpg" alt="Signup Image">
+                </div>
+                <div class="signup-container">
+                    <h2>Signup</h2>
+                    <form>
+                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="email" class="input-field" placeholder="Email" required>
+                        <input type="password" class="input-field" placeholder="Password" required>
+                        <input type="password" class="input-field" placeholder="Confirm Password" required>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                    <p>Have an account?<br/> 
+                    <a href="login.php">Click here</a> to Login.</p>
+                </div>
             </div>
         </div>
         <footer>
@@ -62,8 +64,8 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="threads_search.html">Discussions</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="threads_search.php">Discussions</a></li>
                     </ul>
                 </div>
 
