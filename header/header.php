@@ -1,11 +1,11 @@
 
 <head>
-    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="header/header.css">
 </head>
 <header> 
     <div class = "nav">
         <div class="logo">
-            <img src="images/logo.png" alt="Logo">
+            <img src="images/logo.png" alt="Logo">s
         </div>
         <a href = "../threads_search/threads_search.php" class = "nav_button">Threads</a>
         <a href = "../members/members.php" class = "nav_button">Members</a>
@@ -25,7 +25,7 @@
              </div>
         <a href = "../profile/profile.php" class = "nav_button">My profile</a>
         <a href = "../thread_form/thread_form.php" class = "nav_button">New thread</a>
-        <a href = "index.php" >Home</a>
+        <a href = "../index.php" >Home</a>
         <button class = "nav-button" onclick = "window.location.href = '../login/login.php'" >Login</button>
         <button class = "nav-button" onclick = "window.location.href = '../signup/signup.php'" >Signup</button>
     </div>
