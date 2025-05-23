@@ -16,7 +16,7 @@
                 <div class="signup-container">
                     <h2>Signup</h2>
                     <form name="Signup" onsubmit="return validateForm()">
-                        <input type="text" class="input-field" placeholder="Username" required>
+                        <input type="text" name="user" class="input-field" placeholder="Username" required>
                         <input type="email" class="input-field" placeholder="Email" required>
                         <input type="password" name="password" class="input-field" placeholder="Password" required>
                         <input type="password" name="confirm" class="input-field" placeholder="Confirm Password" required>
@@ -36,6 +36,8 @@ function validateForm() {
     event.preventDefault();
     let password = document.forms["Signup"]["password"].value;
     let confirmPassword = document.forms["Signup"]["confirm"].value;
+    let user = document.forms["Signup"]["user"].value;
+
     const errorElement = document.getElementById("error-message");
 
     if (password !== confirmPassword) {
@@ -43,7 +45,33 @@ function validateForm() {
     
         return false;
     }
+    /*try {
+        const response = await fetch('/register', {
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ user, password })
+            });
 
+            const data = await response.json();
+                    
+            if (response.ok) {
+
+                alert('Registration successful!');
+                window.location.href = '/login';
+
+            } else {
+
+                alert(`Error: ${data.error}`);
+                }
+            } catch (error) {
+
+                console.error('Registration failed:', error);
+                alert('Registration failed. Please try again.');
+
+            }
+    */
     event.target.submit();
     return true;
 }
