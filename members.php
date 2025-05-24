@@ -1,3 +1,5 @@
+
+
 <html>
     <head>
         <link rel="stylesheet" href="members.css">
@@ -11,94 +13,27 @@
                     <p>Members</p> 
                 </div>
                 <div class="card-container">
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
-                    <div class="profile">
-                        <img src="images\profile.png" alt="Profile image">
-                        <p class = "user-label">Giangiorgio</p>
-                        <p class = "role">Admin</p>
-                        <p class="since">Member Since:<br>January 2024</p>
-                        <button class = "load-button" onclick = "window.location.href = 'profile.php'" >See Profile</button>
-                    </div>
+                   
                 </div>
             </div>
-            <button class = "load-more-button" onclick = "window.location.href = ''" >Load More</button>
+            <button class="load-more-button">Load More</button>
         </div>
         <?php require 'footer.php'; ?>
+        <script>
+            let offset = 0;
+            const limit = 15;
+
+            function loadUsers() {
+                fetch(`load_members.php?offset=${offset}&limit=${limit}`)
+                    .then(res => res.text())
+                    .then(data => {
+                        document.querySelector(".card-container").innerHTML += data;
+                        offset += limit;
+                    });
+            }
+
+            document.querySelector(".load-more-button").addEventListener("click", loadUsers);
+            loadUsers(); // Only once         
+            </script>
     </body>    
 </html>
