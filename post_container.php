@@ -1,23 +1,19 @@
 
 <?php
-$mysqli = new mysqli("localhost", "root", "", "pai");
-if ($mysqli->connect_error) {
-    die("Connection failed: " . $mysqli->connect_error);
-}
+$mysqli = $mysqli ?? new mysqli("localhost", "root", "", "pai");
 
-// Allow flexibility: set defaults if not defined externally
-$limit = $limit ?? 5;
-$whereClause = $whereClause ?? "1"; // No filtering
+$limit = $limit ?? 20;
+$offset = $offset ?? 0;
+$whereClause = $whereClause ?? "1";
 $orderClause = $orderClause ?? "t.created_at DESC";
 
-// Query latest threads based on filters
 $threads = $mysqli->query("
     SELECT t.id, t.title, t.user AS author_email, u.username AS author_name
     FROM thread t
     JOIN users u ON u.mail = t.user
     WHERE $whereClause
     ORDER BY $orderClause
-    LIMIT $limit
+    LIMIT $limit OFFSET $offset
 ");
 ?>
 <head>
