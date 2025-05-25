@@ -54,14 +54,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p id="error-message" class="error-message" style=" text-align: center; color: red; font-weight: bold;" ></p>
                     <input type="text" name="title" class="input-field" placeholder="Title" required>
                     <select  name="category" class="form-categori" required>
-                        <option value="option1">Author</option>
-                        <option value="option2">Novel</option>
-                        <option value="option3">Fan art</option>
-                        <option value="option4">Character</option>
-                        <option value="option5">Fan fiction</option>
-                        <option value="option6">News</option>
-                        <option value="option7">Adaptations</option>
-                        <option value="option8">Misc</option>
+                        <option value="Author">Author</option>
+                        <option value="Novel">Novel</option>
+                        <option value="Fan art">Fan art</option>
+                        <option value="Character">Character</option>
+                        <option value="Fan fiction">Fan fiction</option>
+                        <option value="News">News</option>
+                        <option value="Adaptations">Adaptations</option>
+                        <option value="Misc">Misc</option>
                     </select> 
                     <textarea name="description" class="description" rows="4" cols="50" placeholder="Description"></textarea>             
                     <button type="submit" class="submit-button">Create</button>
