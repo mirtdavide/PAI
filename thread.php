@@ -90,23 +90,20 @@ $formattedDate = date("M j, Y", strtotime($originalDate));
                             </div>
                         </div>
                     <?php  $Number++; endwhile; ?>
+                    <?php if (isset($_SESSION['email'])): ?>
                     <div class = "comment-area">
                         <div class="container-title-comment">
                             <p>Post a Comment</p> 
                         </div>
                         <div class="comment">
                             <div class = "comment-left">
-                                <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                                
+                                <img src="image.php?mail=<?= urlencode($_SESSION['email']) ?>" alt="Profile Image" class="profile-image">
                             </div>
                             <div class ="comment-right">
                                 <div class="post-bubble">
                                     <form class="comment-form" name="Post" method="POST" onsubmit="return validateForm()">
                                         <textarea name="comment"placeholder="Write a comment..." required></textarea>
-                                        <?php if (isset($_SESSION['email'])): ?>
                                         <button type="submit" class="submit-button">Post</button>
-                                    <?php else: ?>
-                                        <p style="color: red; font-weight: bold;">You must be logged in to post a comment.</p>
                                     <?php endif; ?>
                                     </form>
                                 </div>
