@@ -14,6 +14,7 @@ $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 15;
 
 $sql = "SELECT username, mail, role, register_date FROM users WHERE role != 'user' ORDER BY register_date DESC LIMIT $limit OFFSET $offset";
 $result = $conn->query($sql);
+$rowsReturned = $result->num_rows;
 
 while ($row = $result->fetch_assoc()) {
     $date = date("F Y", strtotime($row['register_date']));
@@ -27,6 +28,8 @@ while ($row = $result->fetch_assoc()) {
     echo '<button class="load-button" onclick="window.location.href=\'profile.php?user=' . urlencode($row['mail']) . '\'">See Profile</button>';
     echo '</div>';
 }
-
+if ($rowsReturned < $limit) {
+    echo '<div id="end-of-list" style="display:none;"></div>';
+}
 $conn->close();
 ?>

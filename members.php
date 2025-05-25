@@ -26,12 +26,19 @@
                 fetch(`load_members.php?offset=${offset}&limit=${limit}`)
                     .then(res => res.text())
                     .then(data => {
+                        if (!data.trim()) {
+                            document.querySelector(".load-more-button").style.display = 'none';
+                            return;
+                        }
                         document.querySelector(".card-container").innerHTML += data;
                         offset += limit;
+                        if (document.getElementById('end-of-list')) {
+                            document.querySelector(".load-more-button").style.display = 'none';
+                        }
                     });
             }
-            document.querySelector(".load-more-button").addEventListener("click", loadUsers);
             loadUsers(); // Only once         
             </script>
     </body>    
 </html>
+   
