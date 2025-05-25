@@ -11,18 +11,86 @@ $stmt->bind_param("s", $userMail);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
-$originalDate = $user['registre_date'];
-$formattedDate = date("M j, Y", strtotime($originalDate));
+
 if (!$user) {
     echo "<h2>User not found</h2>";
     exit;
 }
-
+$originalDate = $user['registre_date'];
+$formattedDate = date("M j, Y", strtotime($originalDate));
 // Optional: fetch stats
 $posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];
 $threads = $mysqli->query("SELECT COUNT(*) AS count FROM thread WHERE user = '$userMail'")->fetch_assoc()['count'];
 $total = $posts + $threads;
-
+$countries = [
+  "AF" => "🇦🇫 Afghanistan",
+  "AL" => "🇦🇱 Albania",
+  "DZ" => "🇩🇿 Algeria",
+  "AD" => "🇦🇩 Andorra",
+  "AO" => "🇦🇴 Angola",
+  "AR" => "🇦🇷 Argentina",
+  "AM" => "🇦🇲 Armenia",
+  "AU" => "🇦🇺 Australia",
+  "AT" => "🇦🇹 Austria",
+  "AZ" => "🇦🇿 Azerbaijan",
+  "BH" => "🇧🇭 Bahrain",
+  "BD" => "🇧🇩 Bangladesh",
+  "BY" => "🇧🇾 Belarus",
+  "BE" => "🇧🇪 Belgium",
+  "BZ" => "🇧🇿 Belize",
+  "BJ" => "🇧🇯 Benin",
+  "BO" => "🇧🇴 Bolivia",
+  "BR" => "🇧🇷 Brazil",
+  "BG" => "🇧🇬 Bulgaria",
+  "CA" => "🇨🇦 Canada",
+  "CL" => "🇨🇱 Chile",
+  "CN" => "🇨🇳 China",
+  "CO" => "🇨🇴 Colombia",
+  "HR" => "🇭🇷 Croatia",
+  "CU" => "🇨🇺 Cuba",
+  "CZ" => "🇨🇿 Czech Republic",
+  "DK" => "🇩🇰 Denmark",
+  "EG" => "🇪🇬 Egypt",
+  "FI" => "🇫🇮 Finland",
+  "FR" => "🇫🇷 France",
+  "DE" => "🇩🇪 Germany",
+  "GR" => "🇬🇷 Greece",
+  "HU" => "🇭🇺 Hungary",
+  "IN" => "🇮🇳 India",
+  "ID" => "🇮🇩 Indonesia",
+  "IR" => "🇮🇷 Iran",
+  "IQ" => "🇮🇶 Iraq",
+  "IE" => "🇮🇪 Ireland",
+  "IT" => "🇮🇹 Italy",
+  "JP" => "🇯🇵 Japan",
+  "KR" => "🇰🇷 South Korea",
+  "MY" => "🇲🇾 Malaysia",
+  "MX" => "🇲🇽 Mexico",
+  "NL" => "🇳🇱 Netherlands",
+  "NZ" => "🇳🇿 New Zealand",
+  "NG" => "🇳🇬 Nigeria",
+  "NO" => "🇳🇴 Norway",
+  "PK" => "🇵🇰 Pakistan",
+  "PE" => "🇵🇪 Peru",
+  "PH" => "🇵🇭 Philippines",
+  "PL" => "🇵🇱 Poland",
+  "PT" => "🇵🇹 Portugal",
+  "RU" => "🇷🇺 Russia",
+  "SA" => "🇸🇦 Saudi Arabia",
+  "RS" => "🇷🇸 Serbia",
+  "SG" => "🇸🇬 Singapore",
+  "ZA" => "🇿🇦 South Africa",
+  "ES" => "🇪🇸 Spain",
+  "SE" => "🇸🇪 Sweden",
+  "CH" => "🇨🇭 Switzerland",
+  "TH" => "🇹🇭 Thailand",
+  "TR" => "🇹🇷 Turkey",
+  "UA" => "🇺🇦 Ukraine",
+  "AE" => "🇦🇪 United Arab Emirates",
+  "GB" => "🇬🇧 United Kingdom",
+  "US" => "🇺🇸 United States",
+  "VN" => "🇻🇳 Vietnam"
+];
 $stmt->close();
 ?>
 
@@ -37,7 +105,7 @@ $stmt->close();
     
     <body>
 
-                <?php require 'header.php'; ?>
+        <?php require 'header.php'; ?>
 
 
         <div class="main-container">
@@ -54,7 +122,7 @@ $stmt->close();
                         <div class = "label-list">
                              <span class="label <?= htmlspecialchars($user['role']) ?>"><?= htmlspecialchars($user['role']) ?></span>
                         </div>
-                        <span class = "role-country">Administrator - From: 🇮🇹</span>
+                        <span class = "role-country">From:  <?= $countries[$user["country"]] ?? htmlspecialchars($user["country"]) ?> </span>
                         <span class = "joined-label">Joined: <?= htmlspecialchars($formattedDate) ?></span>
 
                         <div class="stats-container">
@@ -72,7 +140,7 @@ $stmt->close();
                             </div>
                         </div>
 
-                    <button class = "load-more-button" onclick = "window.location.href = 'update_profile.php'" >Update Profile</button>       
+                        <button class="load-more-button" onclick="window.location.href='update_profile.php?user=<?= urlencode($user['mail']) ?>'">Update Profile</button>
                     </div>
                 </div>
             </div>
