@@ -277,16 +277,6 @@
             flex-direction: column;
             justify-content: flex-start;
         }
-        .post-left, .comment-left {
-            display: flex;
-            flex-direction: column;
-            border-right: 1px solid var(--border-color);
-            flex: 5%;
-
-            /* Center content horizontally and vertically */
-            align-items: center;   /* horizontally center */
-            justify-content: center; /* vertically center */
-        }
         .profile-image {
 
             width: 80%;
