@@ -120,10 +120,9 @@
           padding: 10px;
           border-radius: 10px;
       }
-      a{
-          text-decoration: none;
+     
 
-      }
+
       .pagination button, .pagination .page-number{
           background: white;
           padding: 10px 15px;
