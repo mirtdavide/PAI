@@ -1,3 +1,32 @@
+<?php
+$mysqli = new mysqli("localhost", "root", "", "pai");
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+$userMail = $_GET['user'] ?? '';
+
+$stmt = $mysqli->prepare("SELECT username, mail, role, country, registre_date FROM users WHERE mail = ?");
+$stmt->bind_param("s", $userMail);
+$stmt->execute();
+$result = $stmt->get_result();
+$user = $result->fetch_assoc();
+
+if (!$user) {
+    echo "<h2>User not found</h2>";
+    exit;
+}
+
+// Optional: fetch stats
+$posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];
+$replies = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail' AND thread_id IS NOT NULL")->fetch_assoc()['count'];
+$total = $posts + $replies;
+
+$stmt->close();
+?>
+
+
+
 <html>
     <head>
         <link rel="stylesheet" href="profile.css">
@@ -18,11 +47,11 @@
                 </div>
                 <div class="profile">
                     <img src="images\profile.png" alt="Profile image">
+                    
                     <div class = "profile-info">
-                        <span class = "username-label">Checco Zalone II</span>
+                        <span class="username-label"><?= htmlspecialchars($user['username']) ?></span>
                         <div class = "label-list">
-                            <span class="label moderator">Forum Moderator</span>
-                            <span class="label developer">Developer</span>
+                             <span class="label usercolor"><?= htmlspecialchars($user['role']) ?></span>
                         </div>
                         <span class = "role-country">Administrator - From: 🇮🇹</span>
                         <span class = "joined-label">Joined: March 2025</span>

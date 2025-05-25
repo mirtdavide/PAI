@@ -1,5 +1,4 @@
 
-
 <html>
     <head>
         <link rel="stylesheet" href="members.css">
@@ -31,7 +30,6 @@
                         offset += limit;
                     });
             }
-
             document.querySelector(".load-more-button").addEventListener("click", loadUsers);
             loadUsers(); // Only once         
             </script>
