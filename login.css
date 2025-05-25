@@ -111,3 +111,8 @@ body {
             max-height: 100%; 
             object-fit: contain; 
           }
+          .error-message {
+            color: red;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
