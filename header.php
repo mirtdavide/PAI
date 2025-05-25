@@ -43,8 +43,12 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php endif; ?>
         <a href = "thread_form.php" class = "nav_button">New thread</a>
         <a href = "index.php" >Home</a>
-        <button class = "nav-button" onclick = "window.location.href = 'login.php'" >Login</button>
-        <button class = "nav-button" onclick = "window.location.href = 'signup.php'" >Signup</button>
+        <?php if (isset($_SESSION['email'])): ?>
+            <button onclick="window.location.href = 'logout.php'" class="nav-button">Logout</button>
+        <?php else: ?>
+            <button onclick="window.location.href = 'login.php'" class="nav-button">Login</button>
+            <button onclick="window.location.href = 'signup.php'" class="nav-button">Signup</button>
+        <?php endif; ?>
         </div>
     </div>
 </header>
