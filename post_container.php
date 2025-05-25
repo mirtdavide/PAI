@@ -52,7 +52,9 @@ $threads = $mysqli->query("
 
         <div class="post">
             <div class="post-left">
-                <img src="image.php?mail=<?= urlencode($thread['author_email']) ?>" alt="Profile Image" class="profile-image">
+                <a href="profile.php?user=<?= urlencode($thread['author_email']) ?>">
+                    <img src="image.php?mail=<?= urlencode($thread['author_email']) ?>" alt="Profile Image" class="profile-image">
+                </a>
                 <div class="post-info">
                     <h3 class="post-title">
                         <a href="thread.php?id=<?= $thread['id'] ?>">
@@ -71,7 +73,9 @@ $threads = $mysqli->query("
                         <h3 class="post-label">Last Reply:</h3>
                         <p class="user-label"><?= htmlspecialchars($lastReply['username']) ?></p>
                     </div>
-                    <img src="image.php?mail=<?= urlencode($lastReply['user']) ?>" alt="Profile Image" class="replier-image">
+                    <a href="profile.php?user=<?= urlencode($lastReply['user']) ?>">
+                        <img src="image.php?mail=<?= urlencode($lastReply['user']) ?>" alt="Profile Image" class="replier-image">
+                    </a>
                 <?php else: ?>
                     <div class="post-info">
                         <h3 class="post-label">No replies yet</h3>
