@@ -9,7 +9,7 @@ if (!isset($_SESSION['email'])) {
 }
 $userMail = $_GET['user'] ?? '';
 
-$stmt = $mysqli->prepare("SELECT username, mail, role, country, registre_date FROM users WHERE mail = ?");
+$stmt = $mysqli->prepare("SELECT username, mail, role, country, register_date FROM users WHERE mail = ?");
 $stmt->bind_param("s", $userMail);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -19,7 +19,7 @@ if (!$user) {
     echo "<h2>User not found</h2>";
     exit;
 }
-$originalDate = $user['registre_date'];
+$originalDate = $user['register_date'];
 $formattedDate = date("M j, Y", strtotime($originalDate));
 // Optional: fetch stats
 $posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];

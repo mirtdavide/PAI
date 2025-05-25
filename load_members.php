@@ -12,11 +12,11 @@ if ($conn->connect_error) {
 $offset = isset($_GET['offset']) ? intval($_GET['offset']) : 0;
 $limit = isset($_GET['limit']) ? intval($_GET['limit']) : 15;
 
-$sql = "SELECT username, mail, role, registre_date FROM users WHERE role != 'user' ORDER BY registre_date DESC LIMIT $limit OFFSET $offset";
+$sql = "SELECT username, mail, role, register_date FROM users WHERE role != 'user' ORDER BY register_date DESC LIMIT $limit OFFSET $offset";
 $result = $conn->query($sql);
 
 while ($row = $result->fetch_assoc()) {
-    $date = date("F Y", strtotime($row['registre_date']));
+    $date = date("F Y", strtotime($row['register_date']));
     $imgSrc = 'image.php?mail=' . urlencode($row['mail']);
 
     echo '<div class="profile">';
