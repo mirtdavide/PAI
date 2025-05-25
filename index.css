@@ -18,10 +18,10 @@ body {
             display: flex;
             flex-direction: column;
             background-color: var(--gray);
-            min-height: 150vh;
+            
         }
         .main-container{
-          height:800px;
+          height:auto;
           display:flex; 
           flex-direction: row; 
           
@@ -71,117 +71,10 @@ body {
           top:10px;
           left:5px;
 
-
-
       }
       
-      .post-container {
-          border:1px solid var(--border-color); 
-          overflow: hidden;
-          border-radius:5px;
-          
-          float: left;
-          margin-top:20px;
-          float:left;
-          width:98%;
-          flex-direction: column;
-         
-      }
-      .post {
-        display:flex;
-        flex-direction: row;
-        background-color:var(--lighter-gray);
-        padding: 15px;
-        border-top:1px solid rgb(83, 82, 82);
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        height: 30px;
-        
-       
-    }
-    .post-left{
-      width:40%;
-      
-    }
-
-    .post-center{
-      display: flex;
-      
-      justify-content: center;
-      width:20%;
-    }
-
-    .post-right{
-      display: flex;
-      flex-direction: row;
-      
-      justify-content: flex-end;
-      width:40%;
-    }
-
-      .post-info{
-        display: flex;
-        flex-direction:column;
-      }
-      .replier-image{
-        width: 30px;
-        height: 30px;
-        border-radius: 10px;
-        border: 1px solid #ccc;
-        object-fit: cover;
-        margin-left: 15px;
-
-    }
-    .post-label{
-      font-size:14px;
-      margin-bottom: 8px;
-      color:white;
-      
-    }
-    .user-label{
-      font-size: 13px;
-      color: #555;
-    }
-      .profile-image{
-          width: 40px;
-          height: 40px;
-          border-radius: 10px;
-          border: 1px solid #ccc;
-          object-fit: cover;
-          float: left;
-          margin-right: 15px;
-
-      }
-
-      
-      .post-title {
-          font-size:15px;
-          margin-bottom: 8px;
-          color:white;
-      }
-          .post-title a {
-            text-decoration: none;
-            color: white; 
-            transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        }
-        .post-title a:hover {
-          color: var(--purple); 
-          transform: scale(1.1);
-      }
-      
-
       .read-more:hover {
           text-decoration: underline;
-      }
-
-      .categories{
-        margin-top:20px;
-        display:flex;
-        flex-direction: column;
-        width:98%;
-        overflow: hidden;
-        border-radius:5px;
-        background-color: var(--light-gray);
-        
       }
 
       .most-discussed{
@@ -231,27 +124,9 @@ body {
 
       }
 
-      .categories-container {
-        padding:10px;
-        margin: auto;
-        width: 98%;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);        
-        gap: 20px;
-    }
 
-    .category {
-        background: white;
-        padding: 20px;
-        height: 15px;
-        text-align: center;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .category:hover{
-      background-color: var(--purple);
-      /*transform: scale(1.1);*/
-    }
+
+
     
   
   

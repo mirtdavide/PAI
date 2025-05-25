@@ -7,7 +7,11 @@
         <?php require 'header.php'; ?>
         <div class = 'main-container'>
             <div class="left-column">
-                <?php require 'post_container.php'; ?>
+                
+                <?php 
+                $limit = 10;
+                require 'post_container.php'; 
+                ?>
                 <?php require 'categories_container.php'; ?>
             	</div>
             <div class = right-column>

@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="categories_container.css">
+</head>
 <div class="categories">
     <div class = "container-title">
         <p>Categories</p> 
