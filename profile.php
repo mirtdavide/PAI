@@ -1,5 +1,8 @@
 <?php
 $mysqli = new mysqli("localhost", "root", "", "pai");
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }

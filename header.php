@@ -31,7 +31,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?php if (isset($_SESSION['email'])): ?>
             <a href="profile.php?user=<?= urlencode($_SESSION['email']) ?>" class="nav_button">My profile</a>
         <?php else: ?>
-            <a href="login.php" class="nav_button">My profile</a>
+            <a href="login.php" class="nav_button">Login</a>
         <?php endif; ?>
         <a href = "thread_form.php" class = "nav_button">New thread</a>
         <a href = "index.php" >Home</a>

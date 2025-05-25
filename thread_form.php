@@ -17,6 +17,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $category = trim($_POST['category']);
     $description = trim($_POST['description']);
     $userEmail = $_SESSION['email'];
+    if (strlen($description) < 30) {
+    die("Description must be at least 30 characters long.");
+    }
 
     $stmt = $mysqli->prepare("INSERT INTO thread (title, category, user) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $title, $category, $userEmail);
@@ -47,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="main-container">
             <div class="thread-container">
                 <h2>Thread</h2>
-                <form name="Thread" action="create_thread.php" method="POST" onsubmit="return validateForm()">
+                <form name="Thread" method="POST" onsubmit="return validateForm()">
                     <p id="error-message" class="error-message" style=" text-align: center; color: red; font-weight: bold;" ></p>
                     <input type="text" name="title" class="input-field" placeholder="Title" required>
                     <select  name="category" class="form-categori" required>
