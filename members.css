@@ -19,7 +19,8 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--gray);
-    min-height: 150vh;
+    min-height: 100vh;
+    justify-content: space-between;
     }
 .load-button{
     background-color: var(--purple);
@@ -54,6 +55,7 @@ body {
           margin:0px auto;
           width:100%;
           max-width: 1200px;
+          height: auto;
     
         }
 
@@ -65,7 +67,7 @@ body {
             overflow: hidden;
             border-radius:5px;
             background-color: var(--light-gray);
-            margin-top:20px;
+            
             
 
           }

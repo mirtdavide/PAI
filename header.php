@@ -25,6 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
             <div class="select-wrapper"></div>
                 <select name="category" class="categori" required>
                 <option value="all">All</option>
+                <option value="Misc">Misc</option>
                 <option value="Novel">Novel</option>
                 <option value="Fan art">Fan art</option>
                 <option value="Character">Character</option>
