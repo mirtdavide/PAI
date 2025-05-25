@@ -1,3 +1,47 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$mysqli = new mysqli("localhost", "root", "", "pai");
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+$threadId = $_GET['id'] ?? null;
+if (!$threadId) {
+    die("No thread ID provided.");
+}
+$stmt = $mysqli->prepare("SELECT * FROM thread WHERE id = ?");
+$stmt->bind_param("i", $threadId);
+$stmt->execute();
+$threadResult = $stmt->get_result();
+$thread = $threadResult->fetch_assoc();
+$stmt->close();
+if (!$thread) {
+    die("Thread not found.");
+}
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
+    $comment = trim($_POST['comment']);
+    $userEmail = $_SESSION['email'];
+
+    if (!empty($comment)) {
+        $stmt = $mysqli->prepare("INSERT INTO posts (body, user, thread_id) VALUES (?, ?, ?)");
+        $stmt->bind_param("ssi", $comment, $userEmail, $threadId);
+        if ($stmt->execute()) {
+            header("Location: thread.php?id=" . $threadId);
+            exit;
+        }
+        $stmt->close();
+    }
+}
+$stmt = $mysqli->prepare("SELECT * FROM posts WHERE thread_id = ? ORDER BY created_at ASC");
+$stmt->bind_param("i", $threadId);
+$stmt->execute();
+$postsResult = $stmt->get_result();
+$originalDate = $thread['created_at'];
+$formattedDate = date("M j, Y", strtotime($originalDate));
+
+?>
 <html>
     <head>
         <link rel="stylesheet" href="thread.css">
@@ -11,83 +55,39 @@
 
                 <div class="container-title">
                     <p>
-                    <span class = "category">Fan Fiction :</span>
-                    <span class = "title">Amon Wins the fight</span>
+                    <span class = "category"><?= htmlspecialchars($thread['category']) ?> :</span>
+                    <span class = "title"><?= htmlspecialchars($thread['title']) ?></span>
                     </p>
                     <div class = "last-info">
 
-                        <i class="fas fa-user"></i> <span class="last-reply">Il Giorgione</span> 
-                        <i class="fas fa-clock"></i> <span class="last-reply">5 July 2014</span>
+                        <i class="fas fa-user"></i> <span class="last-reply"><?= htmlspecialchars($thread['user']) ?></span> 
+                        <i class="fas fa-clock"></i> <span class="last-reply"><?= htmlspecialchars($formattedDate) ?></span>
                     </div>
                     
                     
                 </div>
                 
                 <div class="comments-section">
-
-                    <div class="post">
-                        <div class = "post-left">
-                            <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                            <p class="post-content">Author Name</p>
-                        </div>
-                        <div class ="post-right">
-                            <div class="post-data">
-                                <p>Date</p>
-                                <p>post nr</p>
+                    <?php $Number = 1; while ($post = $postsResult->fetch_assoc()): ?>
+                        <div class="post">
+                            <div class="post-left">
+                                <img src="images/profile.png" alt="Profile Image" class="profile-image">
+                                <p class="post-content"><?= htmlspecialchars($post['user']) ?></p>
                             </div>
-
-                            <div class="post-bubble">
-                                <textarea class="autoResize" disabled>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
+                            <div class="post-right">
+                                <div class="post-data">
+                                    <p><?php
+                                    $date = new DateTime($post['created_at']);
+                                    echo $date->format('F j, Y \a\t H:i');
+                                    ?></p>
+                                    <p>#<?= htmlspecialchars($Number) ?></p>
+                                </div>
+                                <div class="post-bubble">
+                                    <textarea class="autoResize" disabled><?= htmlspecialchars($post['body']) ?></textarea>
+                                </div>
                             </div>
-                                
                         </div>
-                    </div>
-
-                    <div class="post">
-                        <div class = "post-left">
-                            <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                            <p class="post-content">Author Name</p>
-                        </div>
-                        <div class ="post-right">
-                            <div class="post-data">
-                                <p>Date</p>
-                                <p>post nr</p>
-                            </div>
-
-                            <div class="post-bubble">
-                                <textarea class="autoResize" disabled>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
-                            </div>
-                                
-                        </div>
-                    </div>
-
-                    <div class="post">
-                        <div class = "post-left">
-                            <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                            <p class="post-content">Author Name</p>
-                        </div>
-                        <div class ="post-right">
-                            <div class="post-data">
-                                <p>Date</p>
-                                <p>post nr</p>
-                            </div>
-
-                            <div class="post-bubble">
-                                <textarea class="autoResize" disabled>This is  asdfasdfasdfas fasdjnkfha;dlsgbjhl .hjngfa ghjdasl;.fhg;osdifgh;oa hijg;ijerdf ;gvihnraf; iusgrfevhb text cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccinside the textarea.</textarea>
-                            </div>
-                                
-                        </div>
-                    </div>
-                    <div class="pagination">
-                        <button class="prev" onclick="">Previous</button>
-                        <div class="page-number">1</div>
-                        <div class="page-number">2</div>
-                        <div class="page-number">3</div>
-                        <div class="page-number">4</div>
-                        <div class="page-number">5</div>
-                        <div class="page-number">...</div>
-                        <button class="next" onclick="">Next</button>
-                    </div>
+                    <?php  $Number++; endwhile; ?>
                     <div class = "comment-area">
                         <div class="container-title-comment">
                             <p>Post a Comment</p> 
@@ -99,8 +99,8 @@
                             </div>
                             <div class ="comment-right">
                                 <div class="post-bubble">
-                                    <form class="comment-form">
-                                        <textarea placeholder="Write a comment..." required></textarea>
+                                    <form class="comment-form" name="Post" method="POST" onsubmit="return validateForm()">
+                                        <textarea name="comment"placeholder="Write a comment..." required></textarea>
                                         <button type="submit" class="submit-button">Post</button>
                                     </form>
                                 </div>
@@ -125,4 +125,18 @@ document.addEventListener("DOMContentLoaded", function () {
         textarea.style.height = textarea.scrollHeight + "px";
     });
 });
+function validateForm() {
+    const form = document.forms["Post"];
+    const comment = form["comment"].value;
+    const errorElement = document.getElementById("error-message");
+
+    if (comment.length < 10) {
+        errorElement.textContent = "Comment must be at least 10 characters long.";
+        return false;
+    }
+
+    errorElement.textContent = ""; 
+    return true;
+}
+
 </script>

@@ -22,7 +22,12 @@ body {
         }
 
         
-
+        .error-message {
+            align-self: center;
+            color: red;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
         .main-container{
           display:flex;
           flex-direction: column;
