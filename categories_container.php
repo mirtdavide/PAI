@@ -1,3 +1,19 @@
+
+<?php
+$currentCategory = $_GET['category'] ?? 'all';
+$categories = [
+    'Misc' => 'Misc',
+    'Novel' => 'Novel',
+    'Fan art' => 'Fan art',
+    'Character' => 'Character',
+    'Fan fiction' => 'Fan fiction',
+    'News' => 'News',
+    'Author' => 'Author',
+    'Adaptation' => 'Adaptation',
+    
+];
+?>
+
 <head>
     <link rel="stylesheet" href="categories_container.css">
 </head>
@@ -6,13 +22,13 @@
         <p>Categories</p> 
     </div>
     <div class="categories-container">
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=all'">Misc</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Novel'">Novel</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Fan art'">Fan art</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Character'">Character</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Fan fiction'">Fan fiction</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=News'">News</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Adaptations'">Adaptations</div>
-        <div class="category" onclick="window.location.href = 'threads_search.php?category=Author'">Author</div>
+        <?php foreach ($categories as $value => $label): ?>
+            <div 
+                class="category <?= $currentCategory === $value ? 'active' : '' ?>" 
+                onclick="window.location.href = 'threads_search.php?category=<?= urlencode($value) ?>'"
+            >
+                <?= htmlspecialchars($label) ?>
+            </div>
+        <?php endforeach; ?>
     </div>
 </div>
