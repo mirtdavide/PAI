@@ -96,8 +96,10 @@ body {
           background-color:var(--lighter-gray);
           border-top:1px solid rgb(83, 82, 82);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          cursor: pointer; 
           
       }
+
 
       .small-post p{
           background-color: var(--purple);
@@ -113,6 +115,11 @@ body {
         color:white;
       }
       
+
+      .small-post:hover .small-post-label {
+          color: var(--purple);
+          transition: color 0.3s ease; 
+      }
 
       .small-post img{
         width: 20px;
