@@ -25,7 +25,9 @@ $categories = [
         <?php foreach ($categories as $value => $label): ?>
             <div 
                 class="category <?= $currentCategory === $value ? 'active' : '' ?>" 
-                onclick="window.location.href = 'threads_search.php?category=<?= urlencode($value) ?>'"
+                onclick="window.location.href = 'threads_search.php?category=<?= 
+                    ($currentCategory === $value) ? 'all' : urlencode($value) 
+                ?>'"
             >
                 <?= htmlspecialchars($label) ?>
             </div>
