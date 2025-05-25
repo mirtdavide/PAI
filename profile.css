@@ -314,6 +314,7 @@ body {
           }
 
           .profile img {
+          border-radius:20px;
           max-width: 255px;
           max-height: 255px; 
           object-fit: cover; 

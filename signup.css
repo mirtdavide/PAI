@@ -64,6 +64,11 @@ body {
             align-self: center;
             padding: 5px;
         }
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
         
         .signup-wrapper h2 {
             margin-bottom: 15px;
@@ -135,4 +140,5 @@ body {
             gap:20px;
             
         }
+        
           

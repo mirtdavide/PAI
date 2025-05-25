@@ -1,5 +1,7 @@
-<?php
-session_start();
+<?php 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <head>
     <link rel="stylesheet" href="header.css">
@@ -25,7 +27,12 @@ session_start();
                     <option value="option8">Author</option>
                 </select> 
              </div>
-        <a href = "profile.php" class = "nav_button">My profile</a>
+            
+        <?php if (isset($_SESSION['email'])): ?>
+            <a href="profile.php?user=<?= urlencode($_SESSION['email']) ?>" class="nav_button">My profile</a>
+        <?php else: ?>
+            <a href="login.php" class="nav_button">My profile</a>
+        <?php endif; ?>
         <a href = "thread_form.php" class = "nav_button">New thread</a>
         <a href = "index.php" >Home</a>
         <button class = "nav-button" onclick = "window.location.href = 'login.php'" >Login</button>
