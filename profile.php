@@ -51,7 +51,7 @@ $stmt->close();
                     <div class = "profile-info">
                         <span class="username-label"><?= htmlspecialchars($user['username']) ?></span>
                         <div class = "label-list">
-                             <span class="label usercolor"><?= htmlspecialchars($user['role']) ?></span>
+                             <span class="label <?= htmlspecialchars($user['role']) ?>"><?= htmlspecialchars($user['role']) ?></span>
                         </div>
                         <span class = "role-country">Administrator - From: 🇮🇹</span>
                         <span class = "joined-label">Joined: March 2025</span>

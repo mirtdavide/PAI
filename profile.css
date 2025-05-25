@@ -256,6 +256,11 @@ body {
             color: white;
           }
 
+          .admin {
+            background-color: #e60882;
+            color: white;
+          }
+
           .usercolor {
             background-color: #ffff99;
             color: black;
