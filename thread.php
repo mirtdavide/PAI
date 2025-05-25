@@ -71,7 +71,9 @@ $formattedDate = date("M j, Y", strtotime($originalDate));
                     <?php $Number = 1; while ($post = $postsResult->fetch_assoc()): ?>
                         <div class="post">
                             <div class="post-left">
-                                <img src="images/profile.png" alt="Profile Image" class="profile-image">
+                                <a href="profile.php?user=<?= urlencode($post['user']) ?>">
+                                    <img src="image.php?mail=<?= urlencode($post['user']) ?>" alt="Profile Image" class="profile-image">
+                                </a>
                                 <p class="post-content"><?= htmlspecialchars($post['user']) ?></p>
                             </div>
                             <div class="post-right">
@@ -95,16 +97,17 @@ $formattedDate = date("M j, Y", strtotime($originalDate));
                         <div class="comment">
                             <div class = "comment-left">
                                 <img src="images/profile.png" alt="Profile Image" class="profile-image">
+                                
                             </div>
                             <div class ="comment-right">
                                 <div class="post-bubble">
                                     <form class="comment-form" name="Post" method="POST" onsubmit="return validateForm()">
                                         <textarea name="comment"placeholder="Write a comment..." required></textarea>
                                         <?php if (isset($_SESSION['email'])): ?>
-                                            <button type="submit" class="submit-button">Post</button>
-                                        <?php else: ?>
-                                            <p style="color: red; font-weight: bold;">You must be logged in to post a comment.</p>
-                                        <?php endif; ?>
+                                        <button type="submit" class="submit-button">Post</button>
+                                    <?php else: ?>
+                                        <p style="color: red; font-weight: bold;">You must be logged in to post a comment.</p>
+                                    <?php endif; ?>
                                     </form>
                                 </div>
                                     
