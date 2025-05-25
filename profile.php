@@ -6,10 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
-if (!isset($_SESSION['email'])) {
-    header("Location: login.php");
-    exit;
-}
+
 $userMail = $_GET['user'] ?? '';
 
 $stmt = $mysqli->prepare("SELECT username, mail, role, country, register_date FROM users WHERE mail = ?");
