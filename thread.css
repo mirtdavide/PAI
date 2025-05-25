@@ -295,6 +295,7 @@
             border: 1px solid #ccc;
             object-fit: cover;
             margin:10px auto;
+            margin-left:5px;
         }
         
         .post-title {
