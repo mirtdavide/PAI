@@ -1,4 +1,7 @@
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $mysqli = new mysqli("localhost", "root", "", "pai");
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
@@ -6,6 +9,10 @@ if ($mysqli->connect_error) {
 
 $userMail = $_GET['user'] ?? '';
 
+if (!isset($_SESSION['email']) || $_SESSION['email'] !== $userMail) {
+    header("Location: login.php");
+    exit;
+}
 $stmt = $mysqli->prepare("SELECT username, mail, role, country, register_date FROM users WHERE mail = ?");
 $stmt->bind_param("s", $userMail);
 $stmt->execute();

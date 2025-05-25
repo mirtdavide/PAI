@@ -146,7 +146,9 @@ $stmt->close();
                             </div>
                         </div>
 
-                        <button class="load-more-button" onclick="window.location.href='update_profile.php?user=<?= urlencode($user['mail']) ?>'">Update Profile</button>
+                        <?php if (isset($_SESSION['email']) && $_SESSION['email'] === $user['mail']): ?>
+                            <button class="load-more-button" onclick="window.location.href='update_profile.php?user=<?= urlencode($user['mail']) ?>'">Update Profile</button>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
