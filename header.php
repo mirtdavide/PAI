@@ -13,21 +13,29 @@ if (session_status() === PHP_SESSION_NONE) {
         </div>
         <a href = "threads_search.php" class = "nav_button">Threads</a>
         <a href = "members.php" class = "nav_button">Members</a>
+        <form action="threads_search.php" method="GET">
         <div class = "search-container">
-            <input type = "text" class = "search" placeholder = "Looking for a particular thread?">
-            <div class="select-wrapper"></div>
-                <select class="categori" required>
-                    <option value="option1">Misc</option>
-                    <option value="option2">Novel</option>
-                    <option value="option3">Fan art</option>
-                    <option value="option4">Character</option>
-                    <option value="option5">Fan fiction</option>
-                    <option value="option6">News</option>
-                    <option value="option7">Adaptations</option>
-                    <option value="option8">Author</option>
-                </select> 
-             </div>
             
+            <input 
+            type="text" 
+            name="search" 
+            class="search" 
+            placeholder="Looking for a particular thread?"
+            >
+            <div class="select-wrapper"></div>
+                <select name="category" class="categori" required>
+                <option value="all">All</option>
+                <option value="Novel">Novel</option>
+                <option value="Fan art">Fan art</option>
+                <option value="Character">Character</option>
+                <option value="Fan fiction">Fan fiction</option>
+                <option value="NewsAdaptations">News</option>
+                <option value="NewsAdaptations">Adaptations</option>
+                <option value="Author">Author</option>
+        </select>
+             </div>
+        </form>
+        
         <?php if (isset($_SESSION['email'])): ?>
             <a href="profile.php?user=<?= urlencode($_SESSION['email']) ?>" class="nav_button">My profile</a>
         <?php else: ?>
@@ -37,5 +45,6 @@ if (session_status() === PHP_SESSION_NONE) {
         <a href = "index.php" >Home</a>
         <button class = "nav-button" onclick = "window.location.href = 'login.php'" >Login</button>
         <button class = "nav-button" onclick = "window.location.href = 'signup.php'" >Signup</button>
+        </div>
     </div>
 </header>

@@ -1,7 +1,7 @@
 
 <?php
 $mysqli = $mysqli ?? new mysqli("localhost", "root", "", "pai");
-
+$category = $_GET['category'] ?? 'all';
 $limit = $limit ?? 20;
 $offset = $offset ?? 0;
 $whereClause = $whereClause ?? "1";
@@ -21,8 +21,18 @@ $threads = $mysqli->query("
 </head>
 <div class="post-container">
     <div class="container-title">
-        <p>Latest Posts</p> 
-    </div>
+    <p>
+        <?php
+        if (isset($user['username'])) {
+            echo "Threads by: " . htmlspecialchars($user['username']);
+        } elseif (!empty($category) && $category !== 'all') {
+            echo "Latest Posts in: " . htmlspecialchars($category);
+        } else {
+            echo "Latest Posts";
+        }
+        ?>
+    </p>
+</div>
 
     <?php while ($thread = $threads->fetch_assoc()): ?>
         <?php

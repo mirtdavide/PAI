@@ -116,13 +116,15 @@
           justify-content: center;
           align-items: center;
           margin:  10px auto;
-          width: 38%;
           background: var(--black);
           padding: 10px;
           border-radius: 10px;
       }
-      
-      .pagination button, .pagination .page-number {
+      a{
+          text-decoration: none;
+
+      }
+      .pagination button, .pagination .page-number{
           background: white;
           padding: 10px 15px;
           cursor: pointer;
@@ -130,7 +132,14 @@
           color: black;
           border-radius: 8px;
           margin: 0 3px;
+          text-decoration: none;
       }
+      .page-number.active {
+      background-color: var(--purple);
+      color: white;
+      text-decoration: none;
+      }
+
       .pagination button:hover, .pagination .page-number:hover {
           background: var(--purple);
       }

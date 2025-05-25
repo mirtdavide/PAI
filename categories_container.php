@@ -2,17 +2,17 @@
     <link rel="stylesheet" href="categories_container.css">
 </head>
 <div class="categories">
-    <div class = "container-title">
+    <div class="container-title">
         <p>Categories</p> 
     </div>
     <div class="categories-container">
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Misc</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Novel</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Fan art</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Character</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Fan fiction</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">News</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Adaptations</div>
-        <div class="category" onclick = "window.location.href = 'threads_search.php'">Author</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=all'">Misc</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Novel'">Novel</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Fan art'">Fan art</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Character'">Character</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Fan fiction'">Fan fiction</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=News'">News</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Adaptations'">Adaptations</div>
+        <div class="category" onclick="window.location.href = 'threads_search.php?category=Author'">Author</div>
     </div>
 </div>

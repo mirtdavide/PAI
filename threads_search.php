@@ -13,13 +13,21 @@ $offset = ($page - 1) * $limit;
 
 // Category filtering
 $category = $_GET['category'] ?? 'all';
-if ($category === 'all' || trim($category) === '') {
-    $whereClause = "1"; // No filter
-} else {
+$search = trim($_GET['search'] ?? '');
+
+$whereParts = [];
+
+if ($category !== 'all' && $category !== '') {
     $safeCategory = $mysqli->real_escape_string($category);
-    $whereClause = "t.category = '$safeCategory'";
+    $whereParts[] = "t.category = '$safeCategory'";
 }
-echo $whereClause;
+
+if ($search !== '') {
+    $safeSearch = $mysqli->real_escape_string($search);
+    $whereParts[] = "t.title LIKE '%$safeSearch%'";
+}
+
+$whereClause = count($whereParts) > 0 ? implode(' AND ', $whereParts) : '1';
 // Get correct total thread count based on filtering
 $countQuery = $mysqli->query("SELECT COUNT(*) AS total FROM thread t WHERE $whereClause");
 
@@ -38,7 +46,7 @@ $orderClause = "t.created_at DESC";
 
     <div class="pagination">
         <?php if ($page > 1): ?>
-            <a class="next" href="?page=<?= $page - 1 ?>&category=<?= urlencode($category) ?>">Previous</a>
+            <a class="page-number" href="?page=<?= $page - 1 ?>&category=<?= urlencode($category) ?>">Previous</a>
         <?php endif; ?>
 
         <?php
@@ -47,7 +55,7 @@ $orderClause = "t.created_at DESC";
         $endPage = min($totalPages, $startPage + $maxPagesToShow - 1);
         for ($i = $startPage; $i <= $endPage; $i++): ?>
             <a class="page-number <?= $i === $page ? 'active' : '' ?>" href="?page=<?= $i ?>&category=<?= urlencode($category) ?>">
-                <?= $i ?>
+            <?= $i ?>
             </a>
         <?php endfor; ?>
 

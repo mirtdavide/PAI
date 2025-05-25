@@ -31,11 +31,12 @@ body {
         }
 
         .right-column{
-          height: 800px;
+          margin-left: 20px;
+          height: auto;
           display:flex;
           flex-direction: column;
-          width:20%;
-          height: 100%;
+          width:30%;
+          
           
           float:right;
   
@@ -46,7 +47,7 @@ body {
           display:flex;
           flex-direction: column;
           width:100%;
-          height: 100%;
+          height: auto;
        
       }
       .website-title{
@@ -81,10 +82,9 @@ body {
         border:1px solid var(--border-color); 
         overflow: hidden;
         border-radius:5px;
-        float: left;
         margin-top:20px;
-        float:left;
-        width:98%;
+        height: auto;
+        width:100%;
         flex-direction: column;
       }
 
@@ -96,7 +96,7 @@ body {
           background-color:var(--lighter-gray);
           border-top:1px solid rgb(83, 82, 82);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-          height: 30px;
+          
       }
 
       .small-post p{

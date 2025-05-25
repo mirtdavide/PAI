@@ -144,87 +144,12 @@ $stmt->close();
                     </div>
                 </div>
             </div>
-            <div class = "bottom-container">
-                <div class="container-title">
-                    <p>Member-Posts</p> 
-                </div>
-                <div class="post">
-                    <div class = "post-left">
-                        <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                        <div class="post-info">
-                            <h3 class="post-title">Post Title 1</h3>
-                            <p class="user-label">Author Name</p>
-                        </div>
-                    </div>
-                    <div class ="post-center">
-                        <p class = "post-label">Replies</p>
-                    </div>
-                    <div class = "post-right">
-                        <div clas = "post-info">
-                            <h3 class="post-label">Last Reply:</h3>
-                            <p class="user-label">Replier Name</p>
-                        </div>
-                        <img src="images/profile.png" alt="Profile Image" class="replier-image">
-                    </div>
-                </div>
-                <div class="post">
-                    <div class = "post-left">
-                        <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                        <div class="post-info">
-                            <h3 class="post-title">Post Title 1</h3>
-                            <p class="user-label">Author Name</p>
-                        </div>
-                    </div>
-                    <div class ="post-center">
-                        <p class = "post-label">Replies</p>
-                    </div>
-                    <div class = "post-right">
-                        <div clas = "post-info">
-                            <h3 class="post-label">Last Reply:</h3>
-                            <p class="user-label">Replier Name</p>
-                        </div>
-                        <img src="images/profile.png" alt="Profile Image" class="replier-image">
-                    </div>
-                </div>
-                <div class="post">
-                    <div class = "post-left">
-                        <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                        <div class="post-info">
-                            <h3 class="post-title">Post Title 1</h3>
-                            <p class="user-label">Author Name</p>
-                        </div>
-                    </div>
-                    <div class ="post-center">
-                        <p class = "post-label">Replies</p>
-                    </div>
-                    <div class = "post-right">
-                        <div clas = "post-info">
-                            <h3 class="post-label">Last Reply:</h3>
-                            <p class="user-label">Replier Name</p>
-                        </div>
-                        <img src="images/profile.png" alt="Profile Image" class="replier-image">
-                    </div>
-                </div>
-                <div class="post">
-                    <div class = "post-left">
-                        <img src="images/profile.png" alt="Profile Image" class="profile-image">
-                        <div class="post-info">
-                            <h3 class="post-title">Post Title 1</h3>
-                            <p class="user-label">Author Name</p>
-                        </div>
-                    </div>
-                    <div class ="post-center">
-                        <p class = "post-label">Replies</p>
-                    </div>
-                    <div class = "post-right">
-                        <div clas = "post-info">
-                            <h3 class="post-label">Last Reply:</h3>
-                            <p class="user-label">Replier Name</p>
-                        </div>
-                        <img src="images/profile.png" alt="Profile Image" class="replier-image">
-                    </div>
-                </div>
-            </div>
+            <?php
+            $whereClause = "t.user = '" . $mysqli->real_escape_string($userMail) . "'";
+            $orderClause = "t.created_at DESC";
+            $limit = 20; // or however many you want to show
+            ?>
+            <?php require 'post_container.php'; ?>  
         </div>
         <?php require 'footer.php'; ?>         
     </body>    
