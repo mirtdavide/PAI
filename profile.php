@@ -11,7 +11,8 @@ $stmt->bind_param("s", $userMail);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
-
+$originalDate = $user['registre_date'];
+$formattedDate = date("M j, Y", strtotime($originalDate));
 if (!$user) {
     echo "<h2>User not found</h2>";
     exit;
@@ -19,8 +20,8 @@ if (!$user) {
 
 // Optional: fetch stats
 $posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];
-$replies = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail' AND thread_id IS NOT NULL")->fetch_assoc()['count'];
-$total = $posts + $replies;
+$threads = $mysqli->query("SELECT COUNT(*) AS count FROM thread WHERE user = '$userMail'")->fetch_assoc()['count'];
+$total = $posts + $threads;
 
 $stmt->close();
 ?>
@@ -46,7 +47,7 @@ $stmt->close();
                     <p>Member-info</p> 
                 </div>
                 <div class="profile">
-                    <img src="images\profile.png" alt="Profile image">
+                    <img src="image.php?mail=<?= urlencode($user['mail']) ?>" alt="Profile image">
                     
                     <div class = "profile-info">
                         <span class="username-label"><?= htmlspecialchars($user['username']) ?></span>
@@ -54,20 +55,20 @@ $stmt->close();
                              <span class="label <?= htmlspecialchars($user['role']) ?>"><?= htmlspecialchars($user['role']) ?></span>
                         </div>
                         <span class = "role-country">Administrator - From: 🇮🇹</span>
-                        <span class = "joined-label">Joined: March 2025</span>
+                        <span class = "joined-label">Joined: <?= htmlspecialchars($formattedDate) ?></span>
 
                         <div class="stats-container">
                             <div class="stat">
                               <span class="stat-label">Posts</span>
-                              <span class="value">11,145</span>
+                              <span class="value"> <?= htmlspecialchars($posts) ?></span>
                             </div>
                             <div class="stat">
-                                <span class="stat-label">Replies</span>
-                                <span class="value">6,044</span>
+                                <span class="stat-label">Threads</span>
+                                <span class="value"><?= htmlspecialchars($threads) ?></span>
                               </div>
                               <div class="stat">
                                 <span class="stat-label">Total</span>
-                                <span class="value">83</span>
+                                <span class="value"><?= htmlspecialchars($total) ?></span>
                             </div>
                         </div>
 

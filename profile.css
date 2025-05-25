@@ -313,7 +313,13 @@ body {
             
           }
 
+          .profile img {
+          max-width: 255px;
+          max-height: 255px; 
+          object-fit: cover; 
+          display: block;
 
+          }
         
          
 
