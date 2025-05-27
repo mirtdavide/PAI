@@ -2,15 +2,14 @@
 <?php
 $currentCategory = $_GET['category'] ?? 'all';
 $categories = [
-    'Misc' => 'Misc',
-    'Novel' => 'Novel',
-    'Fan art' => 'Fan art',
-    'Character' => 'Character',
-    'Fan fiction' => 'Fan fiction',
-    'News' => 'News',
-    'Author' => 'Author',
-    'Adaptation' => 'Adaptation',
-    
+    'Misc',
+    'Novel',
+    'Fan art',
+    'Character',
+    'Fan fiction',
+    'News',
+    'Author',
+    'Adaptation',
 ];
 ?>
 
@@ -22,14 +21,14 @@ $categories = [
         <p>Categories</p> 
     </div>
     <div class="categories-container">
-        <?php foreach ($categories as $value => $label): ?>
+        <?php foreach ($categories as $value): ?>
             <div 
                 class="category <?= $currentCategory === $value ? 'active' : '' ?>" 
                 onclick="window.location.href = 'threads_search.php?category=<?= 
                     ($currentCategory === $value) ? 'all' : urlencode($value) 
                 ?>'"
             >
-                <?= htmlspecialchars($label) ?>
+                <?= htmlspecialchars($value) ?>
             </div>
         <?php endforeach; ?>
     </div>
