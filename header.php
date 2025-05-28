@@ -10,8 +10,9 @@ if (session_status() === PHP_SESSION_NONE) {
     <div class = "nav">
         <div class="logo">
             <img src="images/logo.png" alt="Logo">
-            <a>NovelNook</a>
+            <p href = "index.php" class = "nav_button">NovelNook</a>
         </div>
+        
         <a href = "threads_search.php" class = "nav_button">Threads</a>
         <a href = "members.php" class = "nav_button">Members</a>
         <form action="threads_search.php" method="GET">
