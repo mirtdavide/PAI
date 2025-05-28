@@ -10,8 +10,8 @@ if ($mysqli->connect_error) {
 $userMail = $_GET['user'] ?? '';
 
 if (!isset($_SESSION['email']) || $_SESSION['email'] !== $userMail) {
-    header("Location: login.php");
-    exit;
+    echo urlencode($user['mail']);
+    echo urlencode($_SESSION['email']);
 }
 $stmt = $mysqli->prepare("SELECT username, mail, role, country, register_date FROM users WHERE mail = ?");
 $stmt->bind_param("s", $userMail);
@@ -99,6 +99,7 @@ $countries = [
 ];
 
 $selectedCountry = $user['country'];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userMail = $_GET['user'] ?? '';
     $newUsername = trim($_POST['username'] ?? '');
