@@ -26,7 +26,7 @@ if ($search !== '') {
 }
 
 $whereClause = count($whereParts) > 0 ? implode(' AND ', $whereParts) : '1';
-\$countQuery = $mysqli->query("SELECT COUNT(*) AS total FROM thread t WHERE $whereClause");
+$countQuery = $mysqli->query("SELECT COUNT(*) AS total FROM thread t WHERE $whereClause");
 
 $totalThreads = $countQuery->fetch_assoc()['total'];
 $totalPages = ceil($totalThreads / $limit);
