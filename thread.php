@@ -123,7 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const textareas = document.querySelectorAll(".autoResize");
 
     textareas.forEach(textarea => {
-        // Set initial height based on content
         textarea.style.height = "auto";
         textarea.style.height = textarea.scrollHeight + "px";
     });

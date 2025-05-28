@@ -1,6 +1,5 @@
 <?php
 if (extension_loaded('sockets')) {
-	//Create socket IPv4
 	$socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP) ;
 	if($socket === false) {
 		$errorcode = socket_last_error() ;
@@ -12,7 +11,6 @@ if (extension_loaded('sockets')) {
 		socket_close($socket);
 	}
 
-	//Create socket IPv6
 	$socket = socket_create(AF_INET6, SOCK_STREAM, SOL_TCP) ;
 	if($socket === false) {
 		$errorcode = socket_last_error() ;

@@ -25,7 +25,6 @@ if (!$user) {
 }
 $originalDate = $user['register_date'];
 $formattedDate = date("M j, Y", strtotime($originalDate));
-// Optional: fetch stats
 $posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];
 $threads = $mysqli->query("SELECT COUNT(*) AS count FROM thread WHERE user = '$userMail'")->fetch_assoc()['count'];
 $total = $posts + $threads;

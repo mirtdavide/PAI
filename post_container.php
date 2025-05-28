@@ -36,10 +36,8 @@ $threads = $mysqli->query("
 
     <?php while ($thread = $threads->fetch_assoc()): ?>
         <?php
-        // Count replies
         $replies = $mysqli->query("SELECT COUNT(*) AS reply_count FROM posts WHERE thread_id = {$thread['id']}")->fetch_assoc()['reply_count'];
-
-        // Last reply user
+        
         $lastReply = $mysqli->query("
             SELECT p.user, u.username 
             FROM posts p 

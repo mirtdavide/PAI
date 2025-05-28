@@ -14,11 +14,9 @@ $stmt->bind_result($image);
 if ($stmt->num_rows > 0) {
     $stmt->fetch();
     if (!empty($image)) {
-        // Detect MIME type using finfo
         $finfo = new finfo(FILEINFO_MIME_TYPE);
         $mime = $finfo->buffer($image);
 
-        // Fallback to PNG if undetectable
         if (!$mime) {
             $mime = "image/png";
         }
@@ -29,7 +27,6 @@ if ($stmt->num_rows > 0) {
     }
 }
 
-// If no image, redirect to default
 header("Location: images/profile.png");
 exit;
 ?>

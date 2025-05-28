@@ -1,7 +1,6 @@
 <?php
 $mysqli = new mysqli("localhost", "root", "", "pai");
 
-// Get top 5 threads with the most posts
 $result = $mysqli->query("
     SELECT t.id, t.title, t.user AS author_email, u.username,
            COUNT(p.id) AS post_count

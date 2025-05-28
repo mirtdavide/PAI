@@ -6,12 +6,10 @@
 require 'header.php';
 $mysqli = new mysqli("localhost", "root", "", "pai");
 
-// Setup
 $limit = 20;
 $page = isset($_GET['page']) ? max(1, (int)$_GET['page']) : 1;
 $offset = ($page - 1) * $limit;
 
-// Category filtering
 $category = $_GET['category'] ?? 'all';
 $search = trim($_GET['search'] ?? '');
 
@@ -28,13 +26,11 @@ if ($search !== '') {
 }
 
 $whereClause = count($whereParts) > 0 ? implode(' AND ', $whereParts) : '1';
-// Get correct total thread count based on filtering
-$countQuery = $mysqli->query("SELECT COUNT(*) AS total FROM thread t WHERE $whereClause");
+\$countQuery = $mysqli->query("SELECT COUNT(*) AS total FROM thread t WHERE $whereClause");
 
 $totalThreads = $countQuery->fetch_assoc()['total'];
 $totalPages = ceil($totalThreads / $limit);
 
-// Post ordering
 $orderClause = "t.created_at DESC";
 ?>
 

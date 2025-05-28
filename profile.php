@@ -21,7 +21,6 @@ if (!$user) {
 }
 $originalDate = $user['register_date'];
 $formattedDate = date("M j, Y", strtotime($originalDate));
-// Optional: fetch stats
 $posts = $mysqli->query("SELECT COUNT(*) AS count FROM posts WHERE user = '$userMail'")->fetch_assoc()['count'];
 $threads = $mysqli->query("SELECT COUNT(*) AS count FROM thread WHERE user = '$userMail'")->fetch_assoc()['count'];
 $total = $posts + $threads;
@@ -152,7 +151,7 @@ $stmt->close();
             <?php
             $whereClause = "t.user = '" . $mysqli->real_escape_string($userMail) . "'";
             $orderClause = "t.created_at DESC";
-            $limit = 20; // or however many you want to show
+            $limit = 20;
             ?>
             <?php require 'post_container.php'; ?>  
         </div>
